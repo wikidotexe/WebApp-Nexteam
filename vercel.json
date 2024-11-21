@@ -14,7 +14,7 @@
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "false",
-        "APP_URL": "https://nofileexistshere.wikidotexe.xyz",
+        "APP_URL": "https://profile.wikidotexe.xyz",
         "APP_KEY": "base64:LO8ZbD+jaM3nnGvPM2OoMVhMSnuvxpnZQE+6oJgejOE=",
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
