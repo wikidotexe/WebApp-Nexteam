@@ -1,0 +1,39 @@
+{
+    "version": 2,
+    "framework": null,
+    "functions": {
+        "api/index.php": { "runtime": "vercel-php@0.6.0" }
+    },
+    "routes": [
+        { "src": "/build/(.*)", "dest": "/public/build/" },
+        { "src": "/(.*)", "dest": "/api/index.php" }
+    ],
+    "public": true,
+    "buildCommand": "vite build",
+    "outputDirectory": "public",
+    "env": {
+        "APP_ENV": "production",
+        "APP_DEBUG": "false",
+        "APP_URL": "https://nhere.wikidotexe.xyz",
+        "APP_KEY": "base64:LO8ZbD+jaM3nnGvPM2OoMVhMSnuvxpnZQE+6oJgejOE=",
+        "APP_TIMEZONE": "UTC",
+        "APP_LOCALE": "en",
+        "APP_FALLBACK_LOCALE": "en",
+        "CACHE_DRIVER": "array",
+        "LOG_CHANNEL": "stderr",
+        "SESSION_DRIVER": "cookie",
+        "SESSION_DOMAIN": null,
+        "DB_CONNECTION": "mysql",
+        "DB_HOST": "4gg.h.filess.io",
+        "DB_PORT": "3306",
+        "DB_DATABASE": "db2024_stormtorn",
+        "DB_USERNAME": "db2024_stormtorn",
+        "DB_PASSWORD": "300102",
+        "MAIL_MAILER": "log",
+        "MAIL_FROM_ADDRESS": "hello@example.com",
+        "MAIL_FROM_NAME": "Laravel",
+        "REDIS_CLIENT": "phpredis",
+        "REDIS_HOST": "127.0.0.1",
+        "REDIS_PORT": "6379"
+    }
+}
