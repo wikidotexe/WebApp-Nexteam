@@ -72,7 +72,7 @@
         <div class="section-title pt-4">
           <p class="text-primary text-uppercase fw-bold mb-3">Our Services</p>
           <h1>Our online services</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipreiscing elit. Lacus penatibus tincidunt</p>
+          <p>Berikut beberapa service kita sediakan untuk anda!</p>
         </div>
       </div>
       @if ($services->isNotEmpty())

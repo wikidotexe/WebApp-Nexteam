@@ -30,8 +30,8 @@ class MemberResource extends Resource
             ->schema([
                 TextInput::make('name')-> required()-> placeholder('Enter Name'),
                 TextInput::make('designation')-> required()-> placeholder('Enter Designation'),
-                TextInput::make('link_url')-> label('Linkedin Url')-> placeholder('Linkedin Url'),
-                TextInput::make('in_url')-> label('Instagram Url')-> placeholder('Instagram Url'),
+                TextInput::make('link_url')-> url()-> label('Linkedin Url')-> placeholder('Linkedin Url'),
+                TextInput::make('in_url')-> url()-> label('Instagram Url')-> placeholder('Instagram Url'),
                 FileUpload::make('image'),
                 Select::make('status')->options([
                     1 => 'Actve',
