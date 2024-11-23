@@ -34,7 +34,7 @@
 	<nav class="navbar navbar-expand-xl navbar-light text-center py-3">
 		<div class="container">
 			<a class="navbar-brand" wire:navigate href="{{ route('home')}}">
-				<img loading="prelaod" decoding="async" class="img-fluid" width="300" src="{{ asset('/front/images/Nofileexistshere.png')}}" alt="Wallet">
+				<img loading="prelaod" decoding="async" class="img-fluid" width="200" src="{{ asset('/front/images/Logo NFEH.png')}}" alt="Wallet">
 			</a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span>
 			</button>
