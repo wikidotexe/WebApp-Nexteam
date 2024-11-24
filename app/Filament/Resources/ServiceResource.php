@@ -34,7 +34,7 @@ class ServiceResource extends Resource
                 ->required(),
                 RichEditor::make('description')-> columnSpan(2),
                 Select::make('status')->options([
-                    1 => 'Actve',
+                    1 => 'Active',
                     2 => 'Block'
                 ])
             ]);
