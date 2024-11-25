@@ -10272,6 +10272,12 @@ textarea.form-control {
     text-decoration: underline !important;
 }
 
+footer .text-center p {
+    font-size: 1rem;
+    color: #6c757d; /* Warna teks muted */
+    margin-bottom: -50px;
+}
+
 .social-icons a {
     display: inline-block;
     height: 45px;

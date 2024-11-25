@@ -63,15 +63,15 @@
 				<div class="footer-widget">
 					<h5 class="mb-4 text-primary font-secondary">Service</h5>
 					<ul class="list-unstyled">
-						<li class="mb-2"><a href="service-details.html">Web Development</a>
+						<li class="mb-2"><a href="service-details.html">Desktop Application</a>
+						</li>
+						<li class="mb-2"><a href="service-details.html">Graphic Design</a>
 						</li>
 						<li class="mb-2"><a href="service-details.html">Internet Network Design</a>
 						</li>
-						<li class="mb-2"><a href="service-details.html">Cloud Service</a>
-						</li>
 						<li class="mb-2"><a href="service-details.html">Troubleshooting Cases</a>
 						</li>
-						<li class="mb-2"><a href="service-details.html">Graphic Design</a>
+						<li class="mb-2"><a href="service-details.html">Web Development</a>
 						</li>
 					</ul>
 				</div>
@@ -86,7 +86,7 @@
 						</li>
 						<li class="mb-2"><a href="#!">Blog</a>
 						</li>
-						<li class="mb-2"><a href="#!">Team</a>
+						<li class="mb-2"><a href="{{ route('teamPage')}}">Team</a>
 						</li>
 					</ul>
 				</div>
@@ -103,6 +103,9 @@
 				</div>
 			</div>		
 		</div>
+		<div class="text-center mt-4">
+            <p class="text-muted">&copy; 2024 All Right Reserved | NoFileExistsHere.</p>
+        </div>
 	</div>
 </footer>
 
