@@ -6,10 +6,10 @@
 	<meta charset="utf-8">
 	<title>{{ $title ?? 'NoFIleExistsHere' }}</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
-	<meta name="description" content="This is meta description">
+	<meta name="description" content="Computers & Internet Website.">
 	<meta name="author" content="Themefisher">
-	<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-	<link rel="icon" href="images/favicon.png" type="image/x-icon">
+	<link rel="shortcut icon" href="{{ asset('/front/images/icon.png')}}" type="image/x-icon">
+	<link rel="icon" href="{{ asset('/front/images/icon.png')}}" type="image/x-icon">
 
 	<!-- # Google Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
