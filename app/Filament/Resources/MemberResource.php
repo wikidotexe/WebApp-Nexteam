@@ -44,7 +44,7 @@ class MemberResource extends Resource
     {
         return $table
             ->columns([
-                ImageColumn::make('image')->width(100),
+                ImageColumn::make('image')-> width(100),
                 TextColumn::make('name'),
                 TextColumn::make('designation')
             ])
