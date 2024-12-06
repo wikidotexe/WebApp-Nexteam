@@ -84,9 +84,9 @@
 						</li>
 						<li class="mb-2"><a href="#!">Contact Us</a>
 						</li>
-						<li class="mb-2"><a href="{{ route('blog')}}">Blog</a>
+						<li class="mb-2"><a href="{{ route('blog')}}" wire:navigate>Blog</a>
 						</li>
-						<li class="mb-2"><a href="{{ route('teamPage')}}">Team</a>
+						<li class="mb-2"><a href="{{ route('teamPage')}}" wire:navigate>Team</a>
 						</li>
 					</ul>
 				</div>

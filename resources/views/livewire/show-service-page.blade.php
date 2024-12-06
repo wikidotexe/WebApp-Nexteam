@@ -8,9 +8,9 @@
               class="list-inline breadcrumbs text-capitalize"
               style="font-weight: 500"
             >
-              <li class="list-inline-item"><a href="{{ route('home' )}}">Home</a></li>
+              <li class="list-inline-item"><a wire:navigate href="{{ route('home' )}}">Home</a></li>
               <li class="list-inline-item">
-                / &nbsp; <a href="{{ route('servicesPage') }}">Services</a>
+                / &nbsp; <a wire:navigate href="{{ route('servicesPage') }}">Services</a>
               </li>
             </ul>
           </div>
