@@ -55,7 +55,7 @@
 								<div class="pt-4">
 									<p class="mb-3">{{ \Carbon\Carbon::parse($article->created_at)-> format('d M, Y')}}</p>
 									<h2 class="h4"><a class="text-black" wire:navigate href="{{ route('blogDetail', $article-> id )}}" >{{ $article -> title }}</a></h2>
-									<p>Heading example Here is example of hedings. You can use this heading by following …</p> <a wire:navigate href="{{ route('blogDetail', $article-> id )}}" class="text-primary fw-bold" aria-label="Read the full article by clicking here">Read More</a>
+									<a wire:navigate href="{{ route('blogDetail', $article-> id )}}" class="text-primary fw-bold" aria-label="Read the full article by clicking here">Read More</a>
 								</div>
 							</article>
 						</div>
@@ -81,7 +81,7 @@
 					</ul>
 				</div>
 				<!-- tags -->
-				<div class="widget widget-tags">
+				<!-- <div class="widget widget-tags">
 					<h4 class="widget-title"><span>Tags</span></h4>
 					<ul class="list-inline widget-list widget-list-inline taxonomies-list">
 						<li class="list-inline-item"><a href="#!">Booth</a>
@@ -99,7 +99,7 @@
 						<li class="list-inline-item"><a href="#!">Video</a>
 						</li>
 					</ul>
-				</div>
+				</div> -->
 				<!-- latest post -->
 				<div class="widget">
 					<h5 class="widget-title"><span>Latest Article</span></h5>
