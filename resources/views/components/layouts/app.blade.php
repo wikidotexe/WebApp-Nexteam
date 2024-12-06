@@ -84,7 +84,7 @@
 						</li>
 						<li class="mb-2"><a href="#!">Contact Us</a>
 						</li>
-						<li class="mb-2"><a href="#!">Blog</a>
+						<li class="mb-2"><a href="{{ route('blog')}}">Blog</a>
 						</li>
 						<li class="mb-2"><a href="{{ route('teamPage')}}">Team</a>
 						</li>
