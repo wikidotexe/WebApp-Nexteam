@@ -10492,3 +10492,10 @@ footer .text-center p {
 .navigation .nav-item .nav-link {
     font-size: 18px;
 }
+
+.alert-success{
+    background: #0dcaf0;
+    color: #000;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+}
