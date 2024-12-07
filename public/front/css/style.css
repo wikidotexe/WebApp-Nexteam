@@ -10494,8 +10494,9 @@ footer .text-center p {
 }
 
 .alert-success{
-    background: #0dcaf0;
-    color: #000;
+    background: #0d6efd;
+    color: #fff;
     padding: 10px 15px;
     margin-bottom: 15px;
+    border-radius: 5px;
 }
