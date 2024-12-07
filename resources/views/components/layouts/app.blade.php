@@ -63,9 +63,9 @@
 				<div class="footer-widget">
 					<h5 class="mb-4 text-primary font-secondary">Other Places</h5>
 					<ul class="list-unstyled">
-						<li class="mb-2"><a href="https://fastwork.id/" target="_blank" wire:navigate>Fastwork</a>
+						<li class="mb-2"><a href="https://fastwork.id/" target="_blank">Fastwork</a>
 						</li>
-						<li class="mb-2"><a href="https://www.fiverr.com/" target="_blank" wire:navigate>Fiverr</a>
+						<li class="mb-2"><a href="https://www.fiverr.com/" target="_blank">Fiverr</a>
 						</li>
 						</li>
 					</ul>
