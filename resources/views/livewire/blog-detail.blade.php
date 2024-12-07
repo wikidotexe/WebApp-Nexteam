@@ -6,9 +6,9 @@
         <div class="mb-5">
           <h2 class="mb-4" style="line-height:1.5">{{ $article -> title}}</h2>
           <span>{{ \Carbon\Carbon::parse($article->created_at)-> format('d, M Y')}}<span class="mx-2">/</span> </span>
-          <p class="list-inline-item">Category : <a href="#!" class="ml-1">{{ $article -> category_name }}</a>
+          <p class="list-inline-item">Category : <a class="ml-1">{{ $article -> category_name }}</a>
           </p>
-          <p class="list-inline-item">Author : <a href="#!" class="ml-1">{{ $article -> author }}</a>
+          <p class="list-inline-item">Author : <a class="ml-1">{{ $article -> author }}</a>
           </p>
           <!-- <p class="list-inline-item">Tags : <a href="#!" class="ml-1">Photo </a> ,<a href="#!"
               class="ml-1">Image </a>

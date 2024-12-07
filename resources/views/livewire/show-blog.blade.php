@@ -74,7 +74,7 @@
 					<ul class="list-unstyled widget-list">			
                         @if ($categories -> isNotEmpty())
                             @foreach ($categories as $category)
-						<li><a href="{{ route('blog'). '?categorySlug='.$category->slug }}">{{ $category-> name }}</a>
+						<li><a href="{{ route('blog'). '?categorySlug='.$category->slug }}" wire:navigate>{{ $category-> name }}</a>
 						</li>
                             @endforeach
                         @endif			

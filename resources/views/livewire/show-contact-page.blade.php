@@ -85,23 +85,23 @@
 								<div class="block mt-0">
 									<h4 class="h5">Still Have Questions?</h4>
 									<div class="content">Call Us We Will Be Happy To Help
-										<br> <a href="tel:+XXX111222">+XXX111222</a> 
+										<br> <a href="https://wa.me/6288891770452?text=Halo%20saya%20ingin%20bertanya%20lebih%20lanjut" target="_blank" wire:navigate>08889177045</a> 
 										<br>Monday - Friday
 										<br>9AM TO 8PM Eastern Time</div>
 								</div>
 								<div class="block mt-4">
-									<h4 class="h5">Canada Office</h4>
-									<div class="content">Park Street.
-										<br>455.
-										<br>Salt lake</div>
+									<h4 class="h5">Jakarta</h4>
+									<div class="content">Pasar Rebo - Jakarta Selatan.
+										<br>16426,
+										<br>Indonesia</div>
 								</div>
 								<div class="block mt-4">
-									<h4 class="h5">Demo Office</h4>
-									<div class="content">22 Park Road.
-										<br>23BX,
-										<br>Demo</div>
+									<h4 class="h5">Depok</h4>
+									<div class="content">Margonda City.
+										<br>16431,
+										<br>Indonesia</div>
 								</div>
-								<div class="block">
+								<!-- <div class="block">
 									<ul class="list-unstyled list-inline my-4 social-icons">
 										<li class="list-inline-item me-3"><a title="Explorer Facebook Profile" class="text-black" href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
 										</li>
@@ -110,7 +110,7 @@
 										<li class="list-inline-item me-3"><a title="Explorer Instagram Profile" class="text-black" href="https://instagram.com/"><i class="fab fa-instagram"></i></a>
 										</li>
 									</ul>
-								</div>
+								</div> -->
 							</div>
 						</div>
 					</div>

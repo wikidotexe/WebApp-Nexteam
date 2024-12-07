@@ -61,17 +61,12 @@
 		<div class="row justify-content-between">
 			<div class="col-lg-2 col-md-4 col-6 mb-4">
 				<div class="footer-widget">
-					<h5 class="mb-4 text-primary font-secondary">Service</h5>
+					<h5 class="mb-4 text-primary font-secondary">Other Places</h5>
 					<ul class="list-unstyled">
-						<li class="mb-2"><a href="service-details.html">Desktop Application</a>
+						<li class="mb-2"><a href="https://fastwork.id/" target="_blank" wire:navigate>Fastwork</a>
 						</li>
-						<li class="mb-2"><a href="service-details.html">Graphic Design</a>
+						<li class="mb-2"><a href="https://www.fiverr.com/" target="_blank" wire:navigate>Fiverr</a>
 						</li>
-						<li class="mb-2"><a href="service-details.html">Internet Network Design</a>
-						</li>
-						<li class="mb-2"><a href="service-details.html">Troubleshooting Cases</a>
-						</li>
-						<li class="mb-2"><a href="service-details.html">Web Development</a>
 						</li>
 					</ul>
 				</div>
@@ -82,7 +77,7 @@
 					<ul class="list-unstyled">
 						<li class="mb-2"><a href="{{ route('page', 1) }}" wire:navigate>About Us</a>
 						</li>
-						<li class="mb-2"><a href="#!">Contact Us</a>
+						<li class="mb-2"><a href="{{ route('contact')}}" wire:navigate>Contact Us</a>
 						</li>
 						<li class="mb-2"><a href="{{ route('blog')}}" wire:navigate>Blog</a>
 						</li>
