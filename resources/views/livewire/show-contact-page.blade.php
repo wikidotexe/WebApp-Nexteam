@@ -62,14 +62,14 @@
 										<label for="name" class="form-label">Full Name</label>
 										<input wire:model="name" type="text" class="form-control shadow-none @error('name') is-invalid @enderror" id="name" name="name">
                                         @error('name')
-                                            <p class="invalid-feedback">{{ $message }}/p>
+                                            <p class="invalid-feedback">{{ $message }}</p>
                                         @enderror
 									</div>
 									<div class="form-group mb-4 pb-2">
 										<label for="email" class="form-label">Email address</label>
 										<input wire:model="email" type="email" class="form-control shadow-none @error('email') is-invalid @enderror" id="email" name="email">
                                         @error('email')
-                                            <p class="invalid-feedback">{{ $message }}/p>
+                                            <p class="invalid-feedback">{{ $message }}</p>
                                         @enderror
 									</div>
 									<div class="form-group mb-4 pb-2">
