@@ -21,6 +21,7 @@
 	<link rel="stylesheet" href="{{ asset('/front/plugins/font-awesome/fontawesome.min.css')}}">
 	<link rel="stylesheet" href="{{ asset('/front/plugins/font-awesome/brands.css')}}">
 	<link rel="stylesheet" href="{{ asset('/front/plugins/font-awesome/solid.css')}}">
+	<link rel="stylesheet" href="{{ asset('/front/plugins/slick/slick.css') }}">
 
 	<!-- # Main Style Sheet -->
 	<link rel="stylesheet" href="{{ asset('/front/css/style.css')}}">

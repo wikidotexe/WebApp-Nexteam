@@ -84,8 +84,8 @@
 							<div class="contact-info">
 								<div class="block mt-0">
 									<h4 class="h5">Still Have Questions?</h4>
-									<div class="content">Call Us We Will Be Happy To Help
-										<br> <a href="https://wa.me/6288891770452?text=Halo%20saya%20ingin%20bertanya%20lebih%20lanjut" target="_blank">08889177045</a> 
+									<div class="content">Chat dan order sekarang.
+										<br> <a href="https://wa.me/+628889177045?text=Halo%20saya%20ingin%20bertanya%20lebih%20lanjut" target="_blank">08889177045</a>
 										<br>Monday - Friday
 										<br>9AM TO 8PM Eastern Time</div>
 								</div>
