@@ -1,35 +1,30 @@
-# Gunakan PHP 8.3 sebagai base image
+# Use PHP 8.3 image
 FROM php:8.3-fpm
 
-# Install dependencies
+# Install system dependencies and PHP extensions
 RUN apt-get update && apt-get install -y \
     libpng-dev \
-    libjpeg-dev \
+    libjpeg62-turbo-dev \
     libfreetype6-dev \
-    zip \
-    unzip \
-    nano \
-    libonig-dev \
-    libxml2-dev \
-    curl \
+    libzip-dev \
+    libicu-dev \
     git \
-    supervisor \
-    && docker-php-ext-install pdo pdo_mysql mbstring exif pcntl bcmath gd
+    unzip \
+    && docker-php-ext-configure zip \
+    && docker-php-ext-install pdo pdo_mysql zip exif pcntl bcmath gd intl \
+    && rm -rf /var/lib/apt/lists/*  # Clean up
 
 # Install Composer
-COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-# Setup working directory
-WORKDIR /var/www/html
+# Set working directory
+WORKDIR /var/www
 
-# Salin seluruh file Laravel
+# Copy the Laravel project files into the container
 COPY . .
 
-# Set permission untuk storage dan cache
-RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
+# Install dependencies
+RUN composer install
 
-# Expose port
+# Expose port 9000
 EXPOSE 9000
-
-# Perintah default
-CMD ["php-fpm"]
