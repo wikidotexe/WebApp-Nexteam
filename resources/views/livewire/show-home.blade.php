@@ -6,7 +6,7 @@
         <div class="block text-center text-lg-start pe-0 pe-xl-5">
           <h1 class="text-capitalize mb-4">Innovate. Excellent!. Succeed!</h1>
           <p class="mb-4">Computers & Internet Website.</p> <a type="button"
-            class="btn btn-primary" href="#" data-bs-toggle="modal" data-bs-target="#applyLoan">See More<span style="font-size: 14px;" class="ms-2 fas fa-arrow-right"></span></a>
+            class="btn btn-primary" href="{{ route('servicesPage') }}" wire:navigate>See More<span style="font-size: 14px;" class="ms-2 fas fa-arrow-right"></span></a>
         </div>
       </div>
       <div class="col-lg-6">
