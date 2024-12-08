@@ -25,6 +25,9 @@ COPY . .
 # Install Laravel dependencies
 RUN composer install
 
+# Set appropriate permissions for Laravel
+RUN chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache
+
 # Expose port 9000 for PHP
 EXPOSE 9000
 
