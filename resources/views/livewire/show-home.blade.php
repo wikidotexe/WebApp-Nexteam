@@ -94,8 +94,12 @@
   <h1 class="heading">Our Clients</h1>
   <p class="client-description">We are proud to work with these amazing clients who trust us to deliver exceptional services.</p>
   <div class="logos-container container">
-    <img src="{{ asset('/front/images/clients/boncafe.png')}}" alt="Boncafe Indonesia" class="client-logo">
-    <img src="{{ asset('/front/images/clients/gojek.png')}}" alt="Gojek" class="client-logo">
+    <a href="https://www.boncafeindonesia.com" target="_blank">
+      <img src="{{ asset('/front/images/clients/boncafe.png')}}" alt="Boncafe Indonesia" class="client-logo">
+    </a>
+    <a href="http://transgo.id/" target="_blank">
+      <img src="{{ asset('/front/images/clients/transgo.png')}}" alt="PT MARIFAH CIPTA BANGSA" class="client-logo">
+    </a>
   </div>
 </section>
 

@@ -41,7 +41,7 @@
 				<div class="section-title text-center">
 					<p class="text-primary text-uppercase fw-bold mb-3">Contact With us</p>
 					<h1>let&rsquo;s get connected</h1>
-					<p>Lorem ipsum dolor sit, consectetur adipiscing . egestas cursus pellentesque dignissim dui, congue etiam</p>
+					<p>Memberdayakan Bisnis Anda Melalui Teknologi – Hubungi Kami Sekarang!</p>
 				</div>
 			</div>
 			<div class="col-lg-10">
