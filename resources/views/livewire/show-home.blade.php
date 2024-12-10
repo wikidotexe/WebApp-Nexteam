@@ -89,4 +89,14 @@
     </div>
   </div>
 </section>
+
+<section class="clients" id="clients">
+  <h1 class="heading">Our Clients</h1>
+  <p class="client-description">We are proud to work with these amazing clients who trust us to deliver exceptional services.</p>
+  <div class="logos-container container">
+    <img src="{{ asset('/front/images/clients/boncafe.png')}}" alt="Boncafe Indonesia" class="client-logo">
+    <img src="{{ asset('/front/images/clients/gojek.png')}}" alt="Gojek" class="client-logo">
+  </div>
+</section>
+
 </main>

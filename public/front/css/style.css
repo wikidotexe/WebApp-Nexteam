@@ -10500,3 +10500,57 @@ footer .text-center p {
     margin-bottom: 15px;
     border-radius: 5px;
 }
+
+.clients {
+    background-color: #fbfbfb;
+    padding: 3rem 1rem;
+  }
+  
+  .clients .heading {
+    font-size: 44px;
+    margin-top: 5px;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #040404;
+  }
+
+  .client-description {
+    text-align: center; /* Untuk memusatkan teks */
+    font-size: 1.1rem; /* Ukuran font bisa disesuaikan */
+    margin-top: 5px; /* Mengurangi jarak antara <h1> dan <p> */
+    color: #555; /* Warna teks yang lebih lembut */
+    margin-bottom: 5rem;
+  }   
+  
+  .clients .logos-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .clients .client-logo {
+    width: auto; /* Memastikan lebar logo menyesuaikan dengan kontainer */
+    height: 70px; /* Menentukan tinggi logo lebih kecil */
+    max-height: 70px; /* Batas maksimum tinggi logo */
+    object-fit: contain; /* Menjaga proporsi logo */
+    margin-bottom: 3rem;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease, transform 0.3s ease;
+  }
+  
+  .clients .client-logo:hover {
+    filter: grayscale(0%);
+    transform: scale(1.1);
+  }  
+  
+  @media (max-width: 768px) {
+    .clients .heading {
+      font-size: 2rem;
+    }
+  
+    .clients .client-logo {
+      height: 80px;
+    }
+  }  
