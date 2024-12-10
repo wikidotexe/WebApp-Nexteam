@@ -1,35 +1,46 @@
-version: '3.8'
-
+version: "3.8"
 services:
   app:
     build:
-      context: .
+      args:
+        user: [current-user]
+        uid: 1000
+      context: ./
       dockerfile: Dockerfile
-    container_name: laravel_app
-    ports:
-      - "8000:9000"
+    image: [image-name]
+    container_name: [container-name]
+    restart: unless-stopped
+    working_dir: /var/www/
     volumes:
-      - .:/var/www/html
-    environment:
-      APP_KEY: ${APP_KEY}
-      DB_HOST: db
-      DB_PORT: 3306
-      DB_DATABASE: ${DB_DATABASE}
-      DB_USERNAME: ${DB_USERNAME}
-      DB_PASSWORD: ${DB_PASSWORD}
-    depends_on:
-      - db
-
+      - ./:/var/www
+    networks:
+      - [network-name]
   db:
-    image: mysql:latest
-    container_name: mysql_db
-    ports:
-      - "3306:3306"
+    image: mysql:8.0
+    container_name: [db-container-name]
+    restart: unless-stopped
     environment:
       MYSQL_DATABASE: ${DB_DATABASE}
       MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_USER: ${DB_USERNAME}
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
     volumes:
-      - db_data:/var/lib/mysql
-
-volumes:
-  db_data:
+      - ./docker-compose/mysql:/docker-entrypoint-initdb.d
+    networks:
+      - [network-name]
+  nginx:
+    image: nginx:alpine
+    container_name: [nginx-container-name]
+    restart: unless-stopped
+    ports:
+      - 8000:80
+    volumes:
+      - ./:/var/www
+      - ./docker-compose/nginx:/etc/nginx/conf.d/
+    networks:
+      - [network-name]
+networks:
+  [network-name]:
+    driver: bridge
