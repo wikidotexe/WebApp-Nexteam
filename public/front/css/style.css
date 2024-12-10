@@ -10531,9 +10531,9 @@ footer .text-center p {
   }
   
   .clients .client-logo {
-    width: auto; /* Memastikan lebar logo menyesuaikan dengan kontainer */
-    height: 70px; /* Menentukan tinggi logo lebih kecil */
-    max-height: 70px; /* Batas maksimum tinggi logo */
+    width: 200px; /* Memastikan lebar logo menyesuaikan dengan kontainer */
+    height: 100px; /* Menentukan tinggi logo lebih kecil */
+    max-height: 1000px; /* Batas maksimum tinggi logo */
     object-fit: contain; /* Menjaga proporsi logo */
     margin-bottom: 3rem;
     filter: grayscale(100%);
