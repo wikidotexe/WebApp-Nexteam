@@ -90,7 +90,7 @@
   </div>
 </section>
 
-<section class="clients" id="clients">
+<section class="banner bg-tertiary position-relative overflow-hidden clients" id="clients">
   <h1 class="heading">Our Clients</h1>
   <p class="client-description">We are proud to work with these amazing clients who trust us to deliver exceptional services.</p>
   <div class="logos-container container">
@@ -101,7 +101,7 @@
       <img src="{{ asset('/front/images/clients/Virsa Wisataa.png')}}" alt="Virsa Wisataa" class="client-logo">
     </a>
     <a href="https://purple-horse-516380.hostingersite.com/" target="_blank">
-      <img src="{{ asset('/front/images/clients/negashii.png')}}" alt="negashii" class="client-logo">
+      <img src="{{ asset('/front/images/clients/negashii.png')}}" alt="Negashii" class="client-logo">
     </a>
     <a href="https://transmonang.com/" target="_blank">
       <img src="{{ asset('/front/images/clients/Transmonang.png')}}" alt="Transmonang" class="client-logo">
