@@ -1,4 +1,4 @@
-![Baner Github](https://github.com/user-attachments/assets/64abd9a5-9321-4f40-8c54-db594536d612)
+![Baner Github](https://github.com/user-attachments/assets/7fa2a308-3f82-4366-8852-7d5710447b5a)
 
 # Landing-page
 
