@@ -1,6 +1,3 @@
-![Logo NFEH2](https://github.com/user-attachments/assets/8d9712eb-9a4e-4447-a80d-c94452925b5e)
-
-
 # Landing-page
 
 [![GitHub Stars](https://img.shields.io/github/stars/wikidotexe/Landing-page?style=social)](https://github.com/wikidotexe/Landing-page/stargazers)
