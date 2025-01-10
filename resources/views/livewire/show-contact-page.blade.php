@@ -83,11 +83,11 @@
 						<div class="col-lg-6 mt-5 mt-lg-0">
 							<div class="contact-info">
 								<div class="block mt-0">
-									<h4 class="h5">Still Have Questions?</h4>
+									<h4 class="h5">Masih banyak ingin ditanya?</h4>
 									<div class="content">Chat dan order sekarang.
 										<br> <a href="https://wa.me/+628889177045?text=Halo%20saya%20ingin%20bertanya%20lebih%20lanjut" target="_blank">08889177045</a>
-										<br>Monday - Friday
-										<br>9AM TO 8PM Eastern Time</div>
+										<br>Senin - Jum'at
+										<br>9AM TO 8PM WIB</div>
 								</div>
 								<div class="block mt-4">
 									<h4 class="h5">Jakarta</h4>
@@ -101,16 +101,14 @@
 										<br>16431,
 										<br>Indonesia</div>
 								</div>
-								<!-- <div class="block">
+								<div class="block">
 									<ul class="list-unstyled list-inline my-4 social-icons">
-										<li class="list-inline-item me-3"><a title="Explorer Facebook Profile" class="text-black" href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
+										<li class="list-inline-item me-3"><a title="Explorer Tiktok Profile" class="text-black" href="https://tiktok.com/"><i class="fab fa-tiktok"></i></a>
 										</li>
-										<li class="list-inline-item me-3"><a title="Explorer Twitter Profile" class="text-black" href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-										</li>
-										<li class="list-inline-item me-3"><a title="Explorer Instagram Profile" class="text-black" href="https://instagram.com/"><i class="fab fa-instagram"></i></a>
+										<li class="list-inline-item me-3"><a title="Explorer Instagram Profile" class="text-black" href="https://instagram.com/nofileexistshere"><i class="fab fa-instagram"></i></a>
 										</li>
 									</ul>
-								</div> -->
+								</div>
 							</div>
 						</div>
 					</div>

@@ -5,26 +5,54 @@
 <head>
 	<meta charset="utf-8">
 	<title>{{ $title ?? 'NoFIleExistsHere' }}</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Computers & Internet Website.">
-	<meta name="author" content="Themefisher">
-	<link rel="shortcut icon" href="{{ asset('/front/images/icon.png')}}" type="image/x-icon">
-	<link rel="icon" href="{{ asset('/front/images/icon.png')}}" type="image/x-icon">
+	<meta name="keywords" content="computers, internet, technology, website, NoFIleExistsHere">
+	<meta name="author" content="NoFIleExistsHere">
 
-	<!-- # Google Fonts -->
+	<!-- Open Graph Meta Tags -->
+	<meta property="og:title" content="{{ $title ?? 'NoFIleExistsHere' }}">
+	<meta property="og:description" content="Your detailed description here.">
+	<meta property="og:image" content="{{ asset('/front/images/icon.png') }}">
+	<meta property="og:url" content="{{ url()->current() }}">
+
+	<!-- Twitter Meta Tags -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="{{ $title ?? 'NoFIleExistsHere' }}">
+	<meta name="twitter:description" content="Your detailed description here.">
+	<meta name="twitter:image" content="{{ asset('/front/images/icon.png') }}">
+
+	<!-- Favicon -->
+	<link rel="icon" href="{{ asset('/front/images/icon.png')}}" type="image/png">
+	<link rel="apple-touch-icon" href="{{ asset('/front/images/icon.png')}}">
+	<link rel="icon" sizes="192x192" href="{{ asset('/front/images/icon.png')}}">
+
+	<!-- Google Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
 
-	<!-- # CSS Plugins -->
+	<!-- CSS Plugins -->
 	<link rel="stylesheet" href="{{ asset('/front/plugins/slick/slick.css')}}">
 	<link rel="stylesheet" href="{{ asset('/front/plugins/font-awesome/fontawesome.min.css')}}">
 	<link rel="stylesheet" href="{{ asset('/front/plugins/font-awesome/brands.css')}}">
 	<link rel="stylesheet" href="{{ asset('/front/plugins/font-awesome/solid.css')}}">
 
-	<!-- # Main Style Sheet -->
+	<!-- Main Style Sheet -->
 	<link rel="stylesheet" href="{{ asset('/front/css/style.css')}}">
-    @livewireStyles
+
+	<!-- Structured Data (Schema.org) -->
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "WebPage",
+		"name": "{{ $title ?? 'NoFIleExistsHere' }}",
+		"description": "Computers & Internet Website.",
+		"url": "{{ url()->current() }}"
+	}
+	</script>
+
+	@livewireStyles
 </head>
 
 <body>
@@ -34,7 +62,7 @@
 	<nav class="navbar navbar-expand-xl navbar-light text-center py-3">
 		<div class="container">
 			<a class="navbar-brand" wire:navigate href="{{ route('home')}}">
-				<img loading="prelaod" decoding="async" class="img-fluid" width="200" src="{{ asset('/front/images/Logo NFEH.png')}}" alt="Wallet">
+				<img loading="prelaod" decoding="async" class="img-fluid" width="150" src="{{ asset('/front/images/Logo NFEH.png')}}" alt="Wallet">
 			</a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span>
 			</button>

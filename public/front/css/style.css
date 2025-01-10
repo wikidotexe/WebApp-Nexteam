@@ -9280,8 +9280,9 @@ a.text-black:hover {
     overflow-wrap: break-word;
 }
 .content img {
-    max-width: 100%;
+    max-width: 30%;
     margin-top: 10px;
+    border-radius: 10px;
     margin-bottom: 35px;
 }
 .content h1,

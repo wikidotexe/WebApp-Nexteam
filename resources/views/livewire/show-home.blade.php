@@ -92,13 +92,16 @@
 
 <section class="banner bg-tertiary position-relative overflow-hidden clients" id="clients">
   <h1 class="heading">Our Clients</h1>
-  <p class="client-description">We are proud to work with these amazing clients who trust us to deliver exceptional services.</p>
+  <p class="client-description">Klien yang mempercayakan kebutuhan digital mereka kepada kami.</p>
   <div class="logos-container container">
     <a href="https://www.boncafeindonesia.com" target="_blank">
       <img src="{{ asset('/front/images/clients/boncafe.png')}}" alt="Boncafe Indonesia" class="client-logo">
     </a>
     <a href="https://virsawisata.co.id/" target="_blank">
       <img src="{{ asset('/front/images/clients/Virsa Wisataa.png')}}" alt="Virsa Wisataa" class="client-logo">
+    </a>
+    <a href="https://proban.co.id" target="_blank">
+      <img src="{{ asset('/front/images/clients/proban.png')}}" alt="PT Proban Otsbrug Trisakti" class="client-logo">
     </a>
     <a href="https://purple-horse-516380.hostingersite.com/" target="_blank">
       <img src="{{ asset('/front/images/clients/negashii.png')}}" alt="Negashii" class="client-logo">
@@ -109,6 +112,13 @@
     <a href="http://transgo.id/" target="_blank">
       <img src="{{ asset('/front/images/clients/transgo.png')}}" alt="PT MARIFAH CIPTA BANGSA" class="client-logo">
     </a>
+    <a href="http://xl.co.id/" target="_blank">
+      <img src="{{ asset('/front/images/clients/xl.png')}}" alt="PT MARIFAH CIPTA BANGSA" class="client-logo">
+    </a>
+    <a href="https://pwl-berkah-teknik-mandiri.vercel.app/" target="_blank">
+      <img src="{{ asset('/front/images/clients/berkahteknik.png')}}" alt="CV Berkah Teknik Mandiri" class="client-logo">
+    </a>
+    
   </div>
 </section>
 
