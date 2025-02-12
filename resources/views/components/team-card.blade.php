@@ -6,14 +6,14 @@
         <ul class="card-social list-inline">
             @if ($member -> link_url != '')
             <li class="list-inline-item">
-                <a class="linkedin" target="_blank" href="{{ $member-> link_url }}" wire:navigate>
+                <a class="linkedin" target="_blank" href="{{ $member-> link_url }}">
                     <i class="fab fa-linkedin"></i>
                 </a>
             </li>
             @endif
             @if ($member -> in_url != '')
             <li class="list-inline-item">
-                <a class="instagran" target="_blank" href="{{ $member-> in_url }}" wire:navigate>
+                <a class="instagran" target="_blank" href="{{ $member-> in_url }}">
                     <i class="fab fa-instagram"></i>
                 </a>
             </li>

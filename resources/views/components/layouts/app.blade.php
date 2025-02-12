@@ -12,14 +12,14 @@
 
 	<!-- Open Graph Meta Tags -->
 	<meta property="og:title" content="{{ $title ?? 'NoFIleExistsHere' }}">
-	<meta property="og:description" content="Your detailed description here.">
+	<meta property="og:description" content="Computers & Internet Website.">
 	<meta property="og:image" content="{{ asset('/front/images/icon.png') }}">
 	<meta property="og:url" content="{{ url()->current() }}">
 
 	<!-- Twitter Meta Tags -->
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:title" content="{{ $title ?? 'NoFIleExistsHere' }}">
-	<meta name="twitter:description" content="Your detailed description here.">
+	<meta name="twitter:description" content="Computers & Internet Website.">
 	<meta name="twitter:image" content="{{ asset('/front/images/icon.png') }}">
 
 	<!-- Favicon -->
@@ -75,6 +75,7 @@
 					<li class="nav-item "> <a wire:navigate class="nav-link " href="{{ route('blog')}}">Blog</a></li>
 					<li class="nav-item "> <a wire:navigate class="nav-link " href="{{ route('faqs')}}">FAQ</a></li>
 				</ul>
+				<a wire:navigate href="https://shop.nofileexistshere.my.id/" class="btn btn-outline-primary">Shop</a><br>
 				<a wire:navigate href="{{ route('contact') }}" class="btn btn-outline-primary">Contact Us</a>
 			</div>
 		</div>
@@ -91,10 +92,9 @@
 				<div class="footer-widget">
 					<h5 class="mb-4 text-primary font-secondary">Other Places</h5>
 					<ul class="list-unstyled">
-						<li class="mb-2"><a href="https://fastwork.id/" target="_blank">Fastwork</a>
+						<li class="mb-2"><a href="https://fastwork.id/user/nfxhere?source=web_marketplace_profile-menu_profile" target="_blank">Fastwork</a>
 						</li>
 						<li class="mb-2"><a href="https://www.fiverr.com/" target="_blank">Fiverr</a>
-						</li>
 						</li>
 					</ul>
 				</div>

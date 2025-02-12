@@ -103,9 +103,9 @@
 								</div>
 								<div class="block">
 									<ul class="list-unstyled list-inline my-4 social-icons">
-										<li class="list-inline-item me-3"><a title="Explorer Tiktok Profile" class="text-black" href="https://tiktok.com/"><i class="fab fa-tiktok"></i></a>
+										<li class="list-inline-item me-3"><a title="Explorer Tiktok Profile" class="text-black" href="https://www.tiktok.com/@nofilesexistshere?_t=ZS-8t0J7M0lKa0&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
 										</li>
-										<li class="list-inline-item me-3"><a title="Explorer Instagram Profile" class="text-black" href="https://instagram.com/nofileexistshere"><i class="fab fa-instagram"></i></a>
+										<li class="list-inline-item me-3"><a title="Explorer Instagram Profile" class="text-black" href="https://instagram.com/nofileexistshere" target="_blank"><i class="fab fa-instagram"></i></a>
 										</li>
 									</ul>
 								</div>

@@ -103,7 +103,7 @@
     <a href="https://proban.co.id" target="_blank">
       <img src="{{ asset('/front/images/clients/proban.png')}}" alt="PT Proban Otsbrug Trisakti" class="client-logo">
     </a>
-    <a href="https://purple-horse-516380.hostingersite.com/" target="_blank">
+    <a href="https://negashii.web.id" target="_blank">
       <img src="{{ asset('/front/images/clients/negashii.png')}}" alt="Negashii" class="client-logo">
     </a>
     <a href="https://transmonang.com/" target="_blank">
