@@ -118,7 +118,6 @@
     <a href="https://pwl-berkah-teknik-mandiri.vercel.app/" target="_blank">
       <img src="{{ asset('/front/images/clients/berkahteknik.png')}}" alt="CV Berkah Teknik Mandiri" class="client-logo">
     </a>
-    
   </div>
 </section>
 

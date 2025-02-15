@@ -62,7 +62,7 @@
 	<nav class="navbar navbar-expand-xl navbar-light text-center py-3">
 		<div class="container">
 			<a class="navbar-brand" wire:navigate href="{{ route('home')}}">
-				<img loading="prelaod" decoding="async" class="img-fluid" width="150" src="{{ asset('/front/images/Logo NFEH.png')}}" alt="Wallet">
+				<img loading="prelaod" decoding="async" class="img-fluid" width="120" src="{{ asset('/front/images/Logo NFEH.png')}}" alt="Wallet">
 			</a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span>
 			</button>
@@ -75,7 +75,7 @@
 					<li class="nav-item "> <a wire:navigate class="nav-link " href="{{ route('blog')}}">Blog</a></li>
 					<li class="nav-item "> <a wire:navigate class="nav-link " href="{{ route('faqs')}}">FAQ</a></li>
 				</ul>
-				<a wire:navigate href="https://shop.nofileexistshere.my.id/" class="btn btn-outline-primary">Shop</a><br>
+				<a href="https://shop.nofileexistshere.my.id/" target="_blank" class="btn btn-outline-primary">Store</a><br>
 				<a wire:navigate href="{{ route('contact') }}" class="btn btn-outline-primary">Contact Us</a>
 			</div>
 		</div>
