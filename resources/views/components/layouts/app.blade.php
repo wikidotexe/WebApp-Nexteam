@@ -75,7 +75,7 @@
 					<li class="nav-item "> <a wire:navigate class="nav-link " href="{{ route('blog')}}">Blog</a></li>
 					<li class="nav-item "> <a wire:navigate class="nav-link " href="{{ route('faqs')}}">FAQ</a></li>
 				</ul>
-				<a href="https://shop.nofileexistshere.my.id/" target="_blank" class="btn btn-outline-primary">Store</a><br>
+				<a href="https://coming-soon-steel-nine.vercel.app/" target="_blank" class="btn btn-outline-primary">Store</a><br>
 				<a wire:navigate href="{{ route('contact') }}" class="btn btn-outline-primary">Contact Us</a>
 			</div>
 		</div>
