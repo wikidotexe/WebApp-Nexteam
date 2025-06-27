@@ -114,7 +114,7 @@
           ['http://xl.co.id/', 'xl.png', 'XL'],
           ['https://pwl-berkah-teknik-mandiri.vercel.app/', 'berkahteknik.png', 'CV Berkah Teknik Mandiri'],
           ['https://pair-studio.com/', 'pairstudio.jpg', 'Pair Studio'],
-          ['https://blpbeauty.com/', 'blp.png', 'BLP'],
+          // ['https://blpbeauty.com/', 'blp.png', 'BLP'],
         ] as [$url, $image, $alt])
           <a href="{{ $url }}" target="_blank">
             <img src="{{ asset("/front/images/clients/$image") }}" alt="{{ $alt }}" class="client-logo">
