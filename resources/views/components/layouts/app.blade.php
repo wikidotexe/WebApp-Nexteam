@@ -6,20 +6,20 @@
 	<meta charset="utf-8">
 	<title>{{ $title ?? 'NoFIleExistsHere' }}</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Computers & Internet Website.">
-	<meta name="keywords" content="computers, internet, technology, website, NoFIleExistsHere">
+	<meta name="description" content="Penyedia layanan teknologi di bidang Computers, Internet, dan Website yang mudah diakses, menawarkan solusi praktis untuk memenuhi kebutuhan digital Anda.">
+	<meta name="keywords" content="computers, internet, technology, website, NoFIleExistsHere, nofileexistshere, nfeh, jasa layanan computer & internet">
 	<meta name="author" content="NoFIleExistsHere">
 
 	<!-- Open Graph Meta Tags -->
 	<meta property="og:title" content="{{ $title ?? 'NoFIleExistsHere' }}">
-	<meta property="og:description" content="Computers & Internet Website.">
+	<meta property="og:description" content="Penyedia layanan teknologi di bidang Computers, Internet, dan Website yang mudah diakses, menawarkan solusi praktis untuk memenuhi kebutuhan digital Anda.">
 	<meta property="og:image" content="{{ asset('/front/images/icon.png') }}">
 	<meta property="og:url" content="{{ url()->current() }}">
 
 	<!-- Twitter Meta Tags -->
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:title" content="{{ $title ?? 'NoFIleExistsHere' }}">
-	<meta name="twitter:description" content="Computers & Internet Website.">
+	<meta name="twitter:description" content="Penyedia layanan teknologi di bidang Computers, Internet, dan Website yang mudah diakses, menawarkan solusi praktis untuk memenuhi kebutuhan digital Anda.">
 	<meta name="twitter:image" content="{{ asset('/front/images/icon.png') }}">
 
 	<!-- Favicon -->
@@ -47,7 +47,7 @@
 		"@context": "https://schema.org",
 		"@type": "WebPage",
 		"name": "{{ $title ?? 'NoFIleExistsHere' }}",
-		"description": "Computers & Internet Website.",
+		"description": "Penyedia layanan teknologi di bidang Computers, Internet, dan Website yang mudah diakses, menawarkan solusi praktis untuk memenuhi kebutuhan digital Anda.",
 		"url": "{{ url()->current() }}"
 	}
 	</script>
@@ -75,7 +75,7 @@
 					<li class="nav-item "> <a wire:navigate class="nav-link " href="{{ route('blog')}}">Blog</a></li>
 					<li class="nav-item "> <a wire:navigate class="nav-link " href="{{ route('faqs')}}">FAQ</a></li>
 				</ul>
-				<a href="https://coming-soon-steel-nine.vercel.app/" target="_blank" class="btn btn-outline-primary">Store</a><br>
+				<a href="https://store.nofileexistshere.my.id/" target="_blank" class="btn btn-outline-primary">Store</a><br>
 				<a wire:navigate href="{{ route('contact') }}" class="btn btn-outline-primary">Contact Us</a>
 			</div>
 		</div>
@@ -127,7 +127,7 @@
 			</div>		
 		</div>
 		<div class="text-center mt-4">
-            <p class="text-muted">&copy; 2024 All Right Reserved | NoFileExistsHere.</p>
+            <p class="text-muted">&copy; 2024 - 2025 All Right Reserved | NoFileExistsHere.</p>
         </div>
 	</div>
 </footer>

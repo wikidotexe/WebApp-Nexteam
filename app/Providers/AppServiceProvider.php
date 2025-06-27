@@ -13,7 +13,7 @@ class AppServiceProvider extends ServiceProvider
     public function register()
     {
     if(config('app.env') === 'local') {
-            $this->app['request']->server->set('HTTPS', true); 
+            $this->app['request']->server->set('HTTP', true); // Set to localhost (http) for deploy on your computers
     }
 }
 

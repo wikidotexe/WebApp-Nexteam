@@ -5,7 +5,7 @@
       <div class="col-lg-6 mb-5 mb-lg-0">
         <div class="block text-center text-lg-start pe-0 pe-xl-5">
           <h1 class="text-capitalize mb-4">Innovate. Excellent!. Succeed!</h1>
-          <p class="mb-4">Computers & Internet Website.</p> <a type="button"
+          <p class="mb-4">Penyedia layanan teknologi di bidang Computers, Internet, dan Website yang mudah diakses.</p> <a type="button"
             class="btn btn-primary" href="{{ route('servicesPage') }}" wire:navigate>See More<span style="font-size: 14px;" class="ms-2 fas fa-arrow-right"></span></a>
         </div>
       </div>
@@ -90,38 +90,124 @@
   </div>
 </section>
 
-<section class="banner bg-tertiary position-relative overflow-hidden clients" id="clients">
+<section class="banner clients" id="clients">
   <h1 class="heading">Our Clients</h1>
   <p class="client-description">Klien yang mempercayakan kebutuhan digital mereka kepada kami.</p>
-  <div class="logos-container container">
-    <a href="https://www.boncafeindonesia.com" target="_blank">
-      <img src="{{ asset('/front/images/clients/boncafe.png')}}" alt="Boncafe Indonesia" class="client-logo">
-    </a>
-    <a href="https://virsawisata.co.id/" target="_blank">
-      <img src="{{ asset('/front/images/clients/Virsa Wisataa.png')}}" alt="Virsa Wisataa" class="client-logo">
-    </a>
-    <a href="https://proban.co.id" target="_blank">
-      <img src="{{ asset('/front/images/clients/proban.png')}}" alt="PT Proban Otsbrug Trisakti" class="client-logo">
-    </a>
-    <a href="https://negashii.web.id" target="_blank">
-      <img src="{{ asset('/front/images/clients/negashii.png')}}" alt="Negashii" class="client-logo">
-    </a>
-    <a href="https://transmonang.com/" target="_blank">
-      <img src="{{ asset('/front/images/clients/Transmonang.png')}}" alt="Transmonang" class="client-logo">
-    </a>
-    <a href="http://transgo.id/" target="_blank">
-      <img src="{{ asset('/front/images/clients/transgo.png')}}" alt="PT MARIFAH CIPTA BANGSA" class="client-logo">
-    </a>
-    <a href="http://xl.co.id/" target="_blank">
-      <img src="{{ asset('/front/images/clients/xl.png')}}" alt="PT MARIFAH CIPTA BANGSA" class="client-logo">
-    </a>
-    <a href="https://pwl-berkah-teknik-mandiri.vercel.app/" target="_blank">
-      <img src="{{ asset('/front/images/clients/berkahteknik.png')}}" alt="CV Berkah Teknik Mandiri" class="client-logo">
-    </a>
-    <a href="https://pair-studio.com/" target="_blank">
-      <img src="{{ asset('/front/images/clients/pairstudio.jpg')}}" alt="CV Berkah Teknik Mandiri" class="client-logo">
-    </a>
+
+  <div class="logos-scroll-mask">
+    <div class="logos-scroll">
+      @foreach(range(1,2) as $i)
+        @foreach([
+          ['https://www.boncafeindonesia.com', 'boncafe.png', 'Boncafe Indonesia'],
+          ['https://virsawisata.co.id/', 'Virsa Wisataa.png', 'Virsa Wisataa'],
+          ['https://proban.co.id', 'proban.png', 'PT Proban Otsbrug Trisakti'],
+          ['https://negashii.web.id', 'negashii.png', 'Negashii'],
+          ['https://transmonang.com/', 'Transmonang.png', 'Transmonang'],
+          ['http://transgo.id/', 'transgo.png', 'PT MARIFAH CIPTA BANGSA'],
+          ['http://xl.co.id/', 'xl.png', 'XL'],
+          ['https://pwl-berkah-teknik-mandiri.vercel.app/', 'berkahteknik.png', 'CV Berkah Teknik Mandiri'],
+          ['https://pair-studio.com/', 'pairstudio.jpg', 'Pair Studio'],
+          ['https://blpbeauty.com/', 'blp.png', 'BLP'],
+        ] as [$url, $image, $alt])
+          <a href="{{ $url }}" target="_blank">
+            <img src="{{ asset("/front/images/clients/$image") }}" alt="{{ $alt }}" class="client-logo">
+          </a>
+        @endforeach
+      @endforeach
+    </div>
   </div>
 </section>
+
+
+<section class="banner bg-tertiary position-relative overflow-hidden clients" id="testimonial">
+  <div class="responsive-container-block big-container">
+    <div class="responsive-container-block bg">
+      <h1 class="heading">Testimonials</h1>
+  <p class="client-description">Dengarkan langsung dari pelanggan kami tentang pengalaman mereka bersama kami.</p>
+    <div class="responsive-container-block blocks">
+      <div class="responsive-cell-block wk-desk-1 wk-tab-1 wk-mobile-1 wk-ipadp-1 content">
+        <p class="text-blk info-block">
+          Berkat bantuannya, migrasi website saya dari komputer lokal ke hosting untuk tugas akhir perkuliahan jadi lebih mudah dan lancar. Semua prosesnya dijelaskan dengan jelas, jadi saya nggak bingung sama sekali. Pelayanannya cepat, responsif, dan hasilnya memuaskan. Sukses selalu buat Next Team! 😁🚀
+        </p>
+        <div class="responsive-container-block person">
+          <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12 icon-block">
+            <img class="profile-img" src="{{ asset('/front/images/boy.png')}}">
+          </div>
+          <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12 text-block"><br>
+            <p class="text-blk name">
+              Muhajir
+            </p>
+            <p class="text-blk desig">
+              Mahasiswa
+            </p>
+            <div class="rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <br>
+          </div>
+        </div>
+      </div>
+      <div class="responsive-cell-block wk-desk-1 wk-tab-1 wk-mobile-1 wk-ipadp-1 content">
+        <p class="text-blk info-block">
+        Pelayanannya oke banget! Dari awal sampai akhir, semuanya dijelaskan dengan jelas dan detail, jadi nggak bingung sama sekali. Hasilnya juga sesuai ekspektasi—company profile jadi lebih rapi, informatif, dan enak dibaca. Pokoknya puas banget, recommended banget buat yang butuh jasa serupa.
+        </p>
+        <div class="responsive-container-block person">
+          <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12 icon-block">
+            <img class="profile-img" src="{{ asset('/front/images/boy.png')}}">
+          </div>
+          <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12 text-block"><br>
+            <p class="text-blk name">
+              Aris Hermawanto
+            </p>
+            <p class="text-blk desig">
+              Perkerja Lepas
+            </p>
+            <div class="rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <br>
+          </div>
+        </div>
+      </div>
+      <div class="responsive-cell-block wk-desk-1 wk-tab-1 wk-mobile-1 wk-ipadp-1 content bottom">
+        <p class="text-blk info-block">
+          Proses instalasi jaringannya berjalan lancar dan cepat! Sekarang koneksi di tempat kami jadi lebih stabil dan nggak ada lagi gangguan yang bikin repot. Timnya juga ramah banget, enak diajak diskusi, dan selalu siap bantu kalau ada kendala. Pokoknya puas banget dengan hasilnya! 👍
+        </p>
+        <div class="responsive-container-block person">
+          <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12 icon-block">
+            <img class="profile-img" src="{{ asset('/front/images/girl.png')}}">
+          </div>
+          <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12 text-block"><br>
+            <p class="text-blk name">
+              Fitriah Ulfah
+            </p>
+            <p class="text-blk desig">
+              HRD - Forthen Indonesia
+            </p>
+            <div class="rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+</main>
+
 
 </main>

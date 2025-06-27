@@ -107,6 +107,8 @@
 										</li>
 										<li class="list-inline-item me-3"><a title="Explorer Instagram Profile" class="text-black" href="https://instagram.com/nofileexistshere" target="_blank"><i class="fab fa-instagram"></i></a>
 										</li>
+										<li class="list-inline-item me-3"><a title="Explorer Linkedin Profile" class="text-black" href="https://www.linkedin.com/company/nofileexistshere/" target="_blank"><i class="fab fa-linkedin"></i></a>
+										</li>
 									</ul>
 								</div>
 							</div>
