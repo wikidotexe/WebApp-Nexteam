@@ -10507,22 +10507,36 @@ footer .text-center p {
 /* Clients */
 
 .clients {
-    background-color: #f9f9f9;
+    background-color: #fbfbfb; /* Samakan dengan background website */
     padding: 3rem 1rem;
     overflow: hidden;
     color: #000;
 }
 
-/* Judul */
-.heading {
-    text-align: center;
-    font-size: 2.5rem;
-    color: #111;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
+/* === Judul dengan garis kiri-kanan === */
+.clients-heading-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
 }
 
-/* Deskripsi */
+.clients-line {
+    flex: 1;
+    border: none;
+    height: 1px;
+    background-color: #ccc;
+    margin: 0;
+}
+
+.heading {
+    font-size: 2.5rem;
+    color: #111;
+    white-space: nowrap;
+    margin: 0;
+}
+
 .client-description {
     text-align: center;
     color: #555;
@@ -10530,36 +10544,35 @@ footer .text-center p {
     font-size: 1.1rem;
 }
 
-/* Wrapper efek fade di kiri-kanan */
+/* === Scroll Container + Fade Mask === */
 .logos-scroll-mask {
     position: relative;
     overflow: hidden;
     mask-image: linear-gradient(
         to right,
         transparent,
-        white 15%,
-        white 85%,
+        #f9f9f9 10%,
+        #f9f9f9 90%,
         transparent
     );
     -webkit-mask-image: linear-gradient(
         to right,
         transparent,
-        white 15%,
-        white 85%,
+        #f9f9f9 10%,
+        #f9f9f9 90%,
         transparent
     );
 }
 
-/* Container yang digerakkan */
 .logos-scroll {
     display: flex;
-    animation: scroll-left 40s linear infinite;
     gap: 3rem;
+    animation: scroll-left 40s linear infinite;
     align-items: center;
     width: max-content;
 }
 
-/* Logo individual */
+/* === Logo Individual === */
 .client-logo {
     height: 60px;
     width: 120px;
@@ -10567,10 +10580,9 @@ footer .text-center p {
     flex-shrink: 0;
     display: block;
     margin: 0 auto;
-    /* Tidak ada filter grayscale atau efek hover */
 }
 
-/* Responsive ukuran logo di layar kecil */
+/* Responsiveness */
 @media (max-width: 768px) {
     .client-logo {
         height: 40px;
@@ -10578,7 +10590,7 @@ footer .text-center p {
     }
 }
 
-/* Keyframes animasi scroll */
+/* === Animation Keyframes === */
 @keyframes scroll-left {
     0% {
         transform: translateX(0%);
@@ -10588,385 +10600,116 @@ footer .text-center p {
     }
 }
 
-/* Testimonial */
-
-.responsive-cell-block.wk-desk-1.wk-tab-1.wk-mobile-1.wk-ipadp-1.content {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* ====== Testimonial Section ====== */
+#testimonial {
+    background-color: #f9f9f9;
+    padding: 80px 20px;
 }
 
-.responsive-cell-block.wk-desk-1.wk-tab-1.wk-mobile-1.wk-ipadp-1.content:hover {
-    transform: translateY(-10px);
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 10px 30px 10px;
-}
-
-.rating i {
-    color: gold;
-    font-size: 15px;
-    padding-left: 10px;
-    margin-right: -5px;
-}
-
-.responsive-cell-block {
-    min-height: 75px;
-}
-
-.text-blk {
-    margin-top: 0px;
-    margin-right: 0px;
-    margin-bottom: 0px;
-    margin-left: 0px;
-    padding-top: 0px;
-    padding-right: 0px;
-    padding-bottom: 0px;
-    padding-left: 0px;
-    line-height: 25px;
-    height: 50%;
-    width: 100%;
-}
-
-img {
-    object-fit: cover;
-}
-
-.responsive-container-block {
-    min-height: 75px;
-    height: fit-content;
-    width: 100%;
-    padding-top: 0px;
-    padding-right: 0px;
-    padding-bottom: 0px;
-    padding-left: 0px;
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 0px;
-    margin-right: auto;
-    margin-bottom: 0px;
-    margin-left: auto;
-    justify-content: flex-start;
-}
-
-.responsive-container-block.bg {
-    width: 100%;
-    height: auto;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    max-width: 1320px;
-    margin: 50px 0 50px 0;
-}
-
-.text-blk.title {
-    width: 100%;
-    height: auto;
+.heading {
     text-align: center;
-    font-size: 36px;
-    line-height: 45px;
-    font-weight: 900;
-    margin-top: 0px;
-    margin-right: 0px;
-    margin-bottom: 0px;
-    margin-left: 0px;
-    margin: 0 0 15px 0;
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 10px;
 }
 
-* {
-    font-family: Nunito, sans-serif;
-}
-
-.text-blk.desc {
+.client-description {
     text-align: center;
     font-size: 18px;
-    line-height: 28px;
-    height: auto;
-    margin-top: 0px;
-    margin-right: 0px;
-    margin-bottom: 50px;
-    margin-left: 0px;
-    max-width: 750px;
+    color: #555;
+    margin-bottom: 40px;
 }
 
-.responsive-container-block.blocks {
-    width: 100%;
-    min-height: 0px;
+/* Testimonial Grid */
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Testimonial Card */
+.testimonial-card {
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 30px 25px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    max-width: 1320px;
+    transition: 0.3s ease;
 }
 
-.responsive-cell-block.wk-desk-1.wk-tab-1.wk-mobile-1.wk-ipadp-1.content {
-    width: 30%;
-    height: auto;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 20px 7px;
-    border-top-left-radius: 16px;
-    border-top-right-radius: 16px;
-    border-bottom-right-radius: 16px;
-    border-bottom-left-radius: 16px;
+.testimonial-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Quote Icon */
+.quote-icon {
+    font-size: 28px;
+    color: #0d6efd;
+    margin-bottom: 15px;
+}
+
+/* Testimonial Text */
+.info-block {
+    font-size: 16px;
+    line-height: 28px;
+    color: #222;
+    font-style: italic;
+    margin-bottom: 25px;
+}
+
+/* Person Info */
+.person {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
+    gap: 15px;
+    margin-top: auto;
 }
 
-.text-blk.info-block {
-    width: 85%;
-    height: auto;
-    font-size: 18px;
-    line-height: 30px;
-    margin-top: 30px;
-    margin-right: 0px;
-    margin-bottom: 50px;
-    margin-left: 0px;
-    margin: 30px 0 30px 0;
-}
-
-.responsive-container-block.person {
-    width: 90%;
-    min-height: 0px;
-    height: auto;
-    margin-top: 0px;
-    margin-right: 31.25px;
-    margin-bottom: 20px;
-    margin-left: 31.25px;
-}
-
-.responsive-cell-block.wk-desk-6.wk-ipadp-6.wk-tab-12.wk-mobile-12.icon-block {
-    width: 22%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.responsive-cell-block.wk-desk-6.wk-ipadp-6.wk-tab-12.wk-mobile-12.text-block {
-    width: 78%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-}
-
-.text-blk.name {
-    font-size: 18px;
-    line-height: 20px;
-    font-weight: 900;
-    height: auto;
-    width: 100%;
-    padding-top: 10px;
-    padding-right: 10px;
-    padding-bottom: 0px;
-    padding-left: 10px;
-}
-
-.text-blk.desig {
-    line-height: 16px;
-    height: auto;
-    width: 100%;
-    padding-top: 10px;
-    padding-right: 10px;
-    margin-top: -15px;
-    padding-left: 10px;
-}
-
+/* Avatar */
 .profile-img {
     width: 50px;
     height: 50px;
-    border-top-left-radius: 50%;
-    border-top-right-radius: 50%;
-    border-bottom-right-radius: 50%;
-    border-bottom-left-radius: 50%;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
-.responsive-container-block.big-container {
-    justify-content: center;
-    padding: 0 50px 0 50px;
+/* Text Block */
+.text-block .name {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 3px;
 }
 
-@media (max-width: 1024px) {
-    .responsive-cell-block.wk-desk-1.wk-tab-1.wk-mobile-1.wk-ipadp-1.content {
-        width: 47%;
-    }
-
-    .responsive-cell-block.wk-desk-1.wk-tab-1.wk-mobile-1.wk-ipadp-1.content.bottom {
-        margin-top: 5%;
-        margin-right: 0px;
-        margin-bottom: 0px;
-        margin-left: 25%;
-    }
-
-    .text-blk.desc {
-        width: 70%;
-    }
-
-    .responsive-container-block.person {
-        margin-top: 5%;
-        margin-right: 31.25px;
-        margin-bottom: 0px;
-        margin-left: 31.25px;
-    }
-
-    .text-blk.title {
-        margin-top: 0px;
-        margin-right: 0px;
-        margin-bottom: 0px;
-        margin-left: 0px;
-    }
-
-    .responsive-container-block.person {
-        margin-top: 21.9375px;
-        margin-right: 31.25px;
-        margin-bottom: 20px;
-        margin-left: 31.25px;
-    }
-
-    .text-blk.info-block {
-        margin-top: 30px;
-        margin-right: 0px;
-        margin-bottom: 25px;
-        margin-left: 0px;
-    }
+.text-block .desig {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
 }
 
+/* Rating */
+.rating i {
+    color: gold;
+    font-size: 14px;
+    margin-right: 2px;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-    .responsive-container-block.person {
-        margin-top: 0px;
-        margin-right: 31.25px;
-        margin-bottom: 0px;
-        margin-left: 31.25px;
-    }
-
-    .text-blk.info-block {
-        height: 50%;
-        font-size: 17px;
-    }
-
-    .responsive-cell-block.wk-desk-1.wk-tab-1.wk-mobile-1.wk-ipadp-1.content {
-        width: 100%;
-        margin-top: 0px;
-        margin-right: 0px;
-        margin-bottom: 5%;
-        margin-left: 0px;
-    }
-
-    .text-blk.desc {
-        margin-top: 0px;
-        margin-right: 0px;
-        margin-bottom: 80px;
-        margin-left: 0px;
-        width: 85%;
-        font-size: 17px;
-    }
-
-    .text-blk.title {
-        margin-top: 0px;
-        margin-right: 0px;
-        margin-bottom: 0px;
-        margin-left: 0px;
-        font-size: 30px;
-    }
-
-    .responsive-cell-block.wk-desk-1.wk-tab-1.wk-mobile-1.wk-ipadp-1.content.bottom {
-        width: 100%;
-        margin-top: 0px;
-        margin-right: 0px;
-        margin-bottom: 0px;
-        margin-left: 0px;
-    }
-
-    .responsive-container-block.blocks {
-        margin-top: 0px;
-        margin-right: 0px;
-        margin-bottom: 0px;
-        margin-left: 0px;
-    }
-
-    .responsive-container-block.bg {
-        flex-wrap: nowrap;
-    }
-
-    .responsive-container-block.person {
-        margin-top: 0px;
-        margin-right: 31.25px;
-        margin-bottom: 20px;
-        margin-left: 31.25px;
-    }
-
-    .text-blk.info-block {
-        margin-top: 30px;
-        margin-right: 0px;
-        margin-bottom: 30px;
-        margin-left: 0px;
-    }
-
-    .text-blk.desc {
-        margin-top: 0px;
-        margin-right: 0px;
-        margin-bottom: 30px;
-        margin-left: 0px;
-    }
-
-    .text-blk.desig {
-        font-size: 15px;
-    }
-
-    .text-blk.name {
-        font-size: 17px;
-    }
-}
-
-@media (max-width: 500px) {
-    .responsive-cell-block.wk-desk-1.wk-tab-1.wk-mobile-1.wk-ipadp-1.content {
-        width: 100%;
-        margin-top: 0px;
-        margin-right: 0px;
-        margin-bottom: 8%;
-        margin-left: 0px;
-    }
-
-    .text-blk.desc {
-        width: 90%;
-        margin-top: 0px;
-        margin-right: 0px;
-        margin-bottom: 0px;
-        margin-left: 0px;
-        font-size: 16px;
-        line-height: 24px;
-    }
-
-    .text-blk.title {
-        margin-top: 0px;
-        margin-right: 0px;
-        margin-bottom: 0px;
-        margin-left: 0px;
+    .heading {
         font-size: 26px;
     }
 
-    .text-blk.info-block {
-        margin-top: 30px;
-        margin-right: 0px;
-        margin-bottom: 50px;
-        margin-left: 0px;
+    .client-description {
         font-size: 16px;
-        line-height: 26px;
-        margin: 30px 0 20px 0;
     }
 
-    .text-blk.desc {
-        margin-top: 0px;
-        margin-right: 0px;
-        margin-bottom: 30px;
-        margin-left: 0px;
-    }
-
-    .responsive-container-block.big-container {
-        padding: 0 30px 0 30px;
-    }
-
-    .text-blk.name {
-        font-size: 17px;
-        margin-top: 20px;
-    }
-
-    .text-blk.desig {
+    .info-block {
         font-size: 15px;
+        line-height: 26px;
     }
 }

@@ -91,8 +91,15 @@
 </section>
 
 <section class="banner clients" id="clients">
-  <h1 class="heading">Our Clients</h1>
-  <p class="client-description">Klien yang mempercayakan kebutuhan digital mereka kepada kami.</p>
+  <div class="clients-heading-wrapper">
+    <hr class="clients-line">
+    <h1 class="heading">Our Clients</h1>
+    <hr class="clients-line">
+  </div>
+
+  <p class="client-description">
+    Klien yang mempercayakan kebutuhan digital mereka kepada kami.
+  </p>
 
   <div class="logos-scroll-mask">
     <div class="logos-scroll">
@@ -118,96 +125,69 @@
   </div>
 </section>
 
-
 <section class="banner bg-tertiary position-relative overflow-hidden clients" id="testimonial">
   <div class="responsive-container-block big-container">
     <div class="responsive-container-block bg">
       <h1 class="heading">Testimonials</h1>
-  <p class="client-description">Dengarkan langsung dari pelanggan kami tentang pengalaman mereka bersama kami.</p>
-    <div class="responsive-container-block blocks">
-      <div class="responsive-cell-block wk-desk-1 wk-tab-1 wk-mobile-1 wk-ipadp-1 content">
-        <p class="text-blk info-block">
-          Berkat bantuannya, migrasi website saya dari komputer lokal ke hosting untuk tugas akhir perkuliahan jadi lebih mudah dan lancar. Semua prosesnya dijelaskan dengan jelas, jadi saya nggak bingung sama sekali. Pelayanannya cepat, responsif, dan hasilnya memuaskan. Sukses selalu buat Next Team! 😁🚀
-        </p>
-        <div class="responsive-container-block person">
-          <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12 icon-block">
-            <img class="profile-img" src="{{ asset('/front/images/boy.png')}}">
-          </div>
-          <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12 text-block"><br>
-            <p class="text-blk name">
-              Muhajir
-            </p>
-            <p class="text-blk desig">
-              Mahasiswa
-            </p>
-            <div class="rating">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-        </div>
-        <br>
+      <p class="client-description">Dengarkan langsung dari pelanggan kami tentang pengalaman mereka bersama kami.</p>
+
+      <div class="testimonial-grid">
+        {{-- Testimonial 1 --}}
+        <div class="testimonial-card">
+          <i class="fas fa-quote-left quote-icon"></i>
+          <p class="info-block">
+            Berkat bantuannya, migrasi website saya dari komputer lokal ke hosting untuk tugas akhir perkuliahan jadi lebih mudah dan lancar. Semua prosesnya dijelaskan dengan jelas, jadi saya nggak bingung sama sekali. Pelayanannya cepat, responsif, dan hasilnya memuaskan. Sukses selalu buat Next Team! 😁🚀
+          </p>
+          <div class="person">
+            <img class="profile-img" src="{{ asset('/front/images/boy.png') }}">
+            <div class="text-block">
+              <p class="name">Muhajir</p>
+              <p class="desig">Mahasiswa</p>
+              <div class="rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="responsive-cell-block wk-desk-1 wk-tab-1 wk-mobile-1 wk-ipadp-1 content">
-        <p class="text-blk info-block">
-        Pelayanannya oke banget! Dari awal sampai akhir, semuanya dijelaskan dengan jelas dan detail, jadi nggak bingung sama sekali. Hasilnya juga sesuai ekspektasi—company profile jadi lebih rapi, informatif, dan enak dibaca. Pokoknya puas banget, recommended banget buat yang butuh jasa serupa.
-        </p>
-        <div class="responsive-container-block person">
-          <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12 icon-block">
-            <img class="profile-img" src="{{ asset('/front/images/boy.png')}}">
-          </div>
-          <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12 text-block"><br>
-            <p class="text-blk name">
-              Aris Hermawanto
-            </p>
-            <p class="text-blk desig">
-              Perkerja Lepas
-            </p>
-            <div class="rating">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-        </div>
-        <br>
+
+        {{-- Testimonial 2 --}}
+        <div class="testimonial-card">
+          <i class="fas fa-quote-left quote-icon"></i>
+          <p class="info-block">
+            Pelayanannya oke banget! Dari awal sampai akhir, semuanya dijelaskan dengan jelas dan detail, jadi nggak bingung sama sekali. Hasilnya juga sesuai ekspektasi—company profile jadi lebih rapi, informatif, dan enak dibaca. Pokoknya puas banget, recommended banget buat yang butuh jasa serupa.
+          </p>
+          <div class="person">
+            <img class="profile-img" src="{{ asset('/front/images/boy.png') }}">
+            <div class="text-block">
+              <p class="name">Aris Hermawanto</p>
+              <p class="desig">Pekerja Lepas</p>
+              <div class="rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="responsive-cell-block wk-desk-1 wk-tab-1 wk-mobile-1 wk-ipadp-1 content bottom">
-        <p class="text-blk info-block">
-          Proses instalasi jaringannya berjalan lancar dan cepat! Sekarang koneksi di tempat kami jadi lebih stabil dan nggak ada lagi gangguan yang bikin repot. Timnya juga ramah banget, enak diajak diskusi, dan selalu siap bantu kalau ada kendala. Pokoknya puas banget dengan hasilnya! 👍
-        </p>
-        <div class="responsive-container-block person">
-          <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12 icon-block">
-            <img class="profile-img" src="{{ asset('/front/images/girl.png')}}">
-          </div>
-          <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12 text-block"><br>
-            <p class="text-blk name">
-              Fitriah Ulfah
-            </p>
-            <p class="text-blk desig">
-              HRD - Forthen Indonesia
-            </p>
-            <div class="rating">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-        </div>
-        <br>
+
+        {{-- Testimonial 3 --}}
+        <div class="testimonial-card">
+          <i class="fas fa-quote-left quote-icon"></i>
+          <p class="info-block">
+            Proses instalasi jaringannya berjalan lancar dan cepat! Sekarang koneksi di tempat kami jadi lebih stabil dan nggak ada lagi gangguan yang bikin repot. Timnya juga ramah banget, enak diajak diskusi, dan selalu siap bantu kalau ada kendala. Pokoknya puas banget dengan hasilnya! 👍
+          </p>
+          <div class="person">
+            <img class="profile-img" src="{{ asset('/front/images/girl.png') }}">
+            <div class="text-block">
+              <p class="name">Fitriah Ulfah</p>
+              <p class="desig">HRD - Forthen Indonesia</p>
+              <div class="rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 </section>
-</main>
-
 
 </main>
