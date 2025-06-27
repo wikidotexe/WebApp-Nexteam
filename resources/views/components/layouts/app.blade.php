@@ -127,7 +127,7 @@
 			</div>		
 		</div>
 		<div class="text-center mt-4">
-            <p class="text-muted">&copy; 2024 - 2025 All Right Reserved | NoFileExistsHere.</p>
+            <p class="text-muted">&copy; 2025 All Right Reserved - NoFileExistsHere.</p>
         </div>
 	</div>
 </footer>
