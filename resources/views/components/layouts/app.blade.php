@@ -96,6 +96,10 @@
 						</li>
 						<li class="mb-2"><a href="https://www.fiverr.com/" target="_blank">Fiverr</a>
 						</li>
+						<li class="mb-2"><a href="https://www.upwork.com/" target="_blank">Upwork</a>
+						</li>
+						<li class="mb-2"><a href="https://www.sribu.com/id" target="_blank">Sribu</a>
+						</li>
 					</ul>
 				</div>
 			</div>
