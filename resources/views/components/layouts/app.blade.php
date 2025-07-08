@@ -139,9 +139,11 @@
 <!-- # JS Plugins -->
 <script src="{{ asset('/front/plugins/jquery/jquery.min.js')}}"></script>
 <script src="{{ asset('/front/plugins/bootstrap/bootstrap.min.js')}}"></script>
+<script src="//unpkg.com/alpinejs" defer></script>
 
 <!-- Main Script -->
 <script src="{{ asset('/front/js/script.js')}}"></script>
 @livewireScripts
+@livewire('whatsapp-chat')
 </body>
 </html>
