@@ -84,10 +84,10 @@
 							<div class="contact-info">
 								<div class="block mt-0">
 									<h4 class="h5">Masih banyak ingin ditanya?</h4>
-									<div class="content">Chat dan order sekarang.
-										<br> <a href="https://wa.me/+628889177045?text=Halo%20saya%20ingin%20bertanya%20lebih%20lanjut" target="_blank">08889177045</a>
+									<div class="content">Chat Admin kami :
+							
 										<br>Senin - Jum'at
-										<br>9AM TO 8PM WIB</div>
+										<br>09:00 to 18:00 WIB</div>
 								</div>
 								<div class="block mt-4">
 									<h4 class="h5">Jakarta</h4>
@@ -96,10 +96,7 @@
 										<br>Indonesia</div>
 								</div>
 								<div class="block mt-4">
-									<h4 class="h5">Depok</h4>
-									<div class="content">Margonda City.
-										<br>16431,
-										<br>Indonesia</div>
+									<h4 class="h5">Media Sosial</h4>
 								</div>
 								<div class="block">
 									<ul class="list-unstyled list-inline my-4 social-icons">
