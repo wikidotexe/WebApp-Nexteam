@@ -22,7 +22,7 @@
         x-cloak
     >
         <strong style="color: #075e54;">Butuh pertanyaan lebih lanjut?</strong>
-        <p style="font-size: 14px; color: #444; margin-top: 8px;">Klik tombol di bawah untuk chat dengan kami via WhatsApp.</p>
+        <p style="font-size: 14px; color: #444; margin-top: 8px;">Klik tombol di bawah untuk chat dengan team kami via WhatsApp.</p>
         <a
             href="https://wa.me/{{ config('services.whatsapp.number') }}?text=Halo%20saya%20butuh%20bantuan"
             target="_blank"
