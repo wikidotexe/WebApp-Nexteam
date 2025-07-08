@@ -24,7 +24,7 @@
         <strong style="color: #075e54;">Butuh pertanyaan lebih lanjut?</strong>
         <p style="font-size: 14px; color: #444; margin-top: 8px;">Klik tombol di bawah untuk chat dengan team kami via WhatsApp.</p>
         <a
-            href="https://wa.me/{{ config('services.whatsapp.number') }}?text=Halo%20saya%20butuh%20bantuan"
+            href="https://wa.me/{{ config('services.whatsapp.number') }}?text=Halo%2C%20saya%20ingin%20bertanya%20lebih%20lanjut"
             target="_blank"
             rel="noopener"
             style="margin-top: 12px; display: inline-block; background: #25d366; color: white; padding: 8px 12px; border-radius: 4px; text-decoration: none; font-size: 14px;"
