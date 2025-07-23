@@ -109,6 +109,7 @@
           ['https://virsawisata.co.id/', 'Virsa Wisataa.png', 'Virsa Wisataa'],
           ['https://proban.co.id', 'proban.png', 'PT Proban Otsbrug Trisakti'],
           ['https://negashii.web.id', 'negashii.png', 'Negashii'],
+          ['https://www.telkomsel.com/landingpage/regular/reg5?utm_source=SEM&utm_medium=Text&utm_campaign=MDM-AON-TSEL-Revampq3-BC-10670-Convert-Reg5Quad2&utm_term=Text&utm_content=brand_jitu1_revampaonQuad2&gad_source=1&gad_campaignid=22719197410&gbraid=0AAAAADPZ06NJsxM4ak9one0hMdSMRKNfv&gclid=CjwKCAjw7fzDBhA7EiwAOqJkh7Ge_uJ8KlK8hVjE38BWhQl7HfdSHZ5eQ_u2LUj_3i1ae1OGDfFPwRoCA04QAvD_BwE', 'indihome.png', 'Indihome'],
           ['https://transmonang.com/', 'Transmonang.png', 'Transmonang'],
           ['http://transgo.id/', 'transgo.png', 'PT MARIFAH CIPTA BANGSA'],
           ['http://xl.co.id/', 'xl.png', 'XL'],
