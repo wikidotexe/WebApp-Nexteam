@@ -9,6 +9,7 @@ use App\Livewire\ShowPage;
 use App\Livewire\ShowService;
 use App\Livewire\ShowServicePage;
 use App\Livewire\ShowTeamPage;
+use App\Http\Controllers\InvoiceController;
 use Illuminate\Support\Facades\Route;
 
 // Route::get('/', function () {
@@ -24,3 +25,4 @@ Route::get('/blog/{id}', BlogDetail::class)-> name('blogDetail');
 Route::get('/faqs', ShowFaqPage::class)-> name('faqs');
 Route::get('/page/{id}', ShowPage::class)-> name('page');
 Route::get('/contact', ShowContactPage::class)-> name('contact');
+Route::get('/invoice/{id}/pdf', [InvoiceController::class, 'exportPdf'])->name('invoice.pdf');
