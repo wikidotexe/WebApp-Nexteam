@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta charset="UTF-8">
     <title>Invoice #{{ $invoice->invoice_number }}</title>
     <style>
-        body { font-family: DejaVu Sans, sans-serif; font-size: 14px; color: #333; }
+        body {
+            font-family: DejaVu Sans, sans-serif;
+            font-size: 14px;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            min-height: 297mm; /* Tinggi kertas A4 */
+        }
+
         .clearfix::after { content: ""; display: table; clear: both; }
 
         /* Header */
@@ -20,10 +30,18 @@
         /* Items Table */
         table.items { width: 100%; border-collapse: collapse; margin-top: 20px; }
         table.items th, table.items td { border: 1px solid #ddd; padding: 8px; }
-        table.items th { background-color: #f4f4f4; }
+        table.items th {
+            background-color: #3498db;
+            color: white;
+            text-align: left;
+        }
+        table.items td { vertical-align: top; }
 
-        /* Total */
-        .total { text-align: right; font-size: 16px; font-weight: bold; }
+        /* Right align numeric columns */
+        .text-right { text-align: right; }
+
+        /* Total styles */
+        .total { text-align: left; font-size: 16px; font-weight: bold; }
 
         /* Bank Info */
         .bank-info { margin-top: 20px; line-height: 1.5; }
@@ -31,15 +49,24 @@
         /* Notes */
         .notes { margin-top: 10px; font-style: italic; }
 
-        /* Footer */
-        .footer { margin-top: 30px; font-size: 12px; text-align: center; color: #777; }
+        /* Footer fixed di bawah kertas */
+        .footer {
+            position: absolute;
+            bottom: -10mm; /* Jarak dari bawah kertas */
+            left: 0;
+            width: 100%;
+            font-size: 12px;
+            text-align: center;
+            color: #777;
+        }
     </style>
+
 </head>
 <body>
     <!-- Header -->
     <div class="clearfix">
         <div class="company-logo">
-            <img src="{{ public_path('images/logo.png') }}" alt="Company Logo">
+            <img src="{{ public_path('front/images/Logo NFEH.png') }}" alt="Company Logo">
             <p><strong>NoFileExistsHere.</strong><br>
                Jl. Perumahan Pesona Grogol 2, Depok<br>
                info@nofileexistshere.my.id | (08) 889177045
@@ -74,48 +101,51 @@
     <table class="items">
         <thead>
             <tr>
-                <th style="width: 50%;">Description</th>
+                <th style="width: 40%;">Description</th>
                 <th style="width: 15%;">Price</th>
-                <th style="width: 15%;">Amount</th>
-                <th style="width: 20%;">Tax ({{ $invoice->tax }}%)</th>
+                <th style="width: 10%;">Qty</th>
+                <th style="width: 10%;">Tax ({{ $invoice->tax ?? 0 }}%)</th>
+                <th style="width: 25%;">Amount</th>
             </tr>
         </thead>
         <tbody>
             @foreach($invoice->items as $item)
                 @php
-                    $itemTotal = $item->quantity * $item->unit_price;
-                    $itemTax = $itemTotal * ($invoice->tax / 100);
+                    $qty = $item->quantity;
+                    $unit = $item->unit_price;
+                    $itemTotal = $qty * $unit; // harga sebelum pajak
+                    $itemTax = $itemTotal * (($invoice->tax ?? 0) / 100); // pajak untuk item
+                    $itemAmount = $itemTotal + $itemTax; // amount = item + tax
                 @endphp
                 <tr>
                     <td>{{ $item->description }}</td>
-                    <td>Rp{{ number_format($item->unit_price, 0, ',', '.') }}</td>
-                    <td>Rp{{ number_format($itemTotal, 0, ',', '.') }}</td>
-                    <td>Rp{{ number_format($itemTax, 0, ',', '.') }}</td>
+                    <td class="text-right">Rp{{ number_format($unit, 0, ',', '.') }}</td>
+                    <td class="text-right">{{ $qty }}</td>
+                    <td class="text-right">Rp{{ number_format($itemTax, 0, ',', '.') }}</td>
+                    <td class="text-right">Rp{{ number_format($itemAmount, 0, ',', '.') }}</td>
                 </tr>
             @endforeach
         </tbody>
         <tfoot>
             @php
-                $total = 0;
+                $total = 0;      // sum of itemTotal (without tax)
+                $totalTax = 0;   // sum of itemTax
                 foreach($invoice->items as $item) {
-                    $total += $item->quantity * $item->unit_price;
+                    $itemTotal = $item->quantity * $item->unit_price;
+                    $itemTax = $itemTotal * (($invoice->tax ?? 0) / 100);
+                    $total += $itemTotal;
+                    $totalTax += $itemTax;
                 }
-                $taxAmount = $total * ($invoice->tax / 100);
-                $grandTotal = $total + $taxAmount;
+                $grandTotal = $total + $totalTax; // sum(amounts)
             @endphp
             <tr>
-                <td colspan="2" class="total">Total</td>
-                <td>Rp{{ number_format($total, 0, ',', '.') }}</td>
-                <td>Rp{{ number_format($taxAmount, 0, ',', '.') }}</td>
-            </tr>
-            <tr>
-                <td colspan="3" class="total">Grand Total</td>
-                <td>Rp{{ number_format($grandTotal, 0, ',', '.') }}</td>
+                <td colspan="4" class="total">Total</td>
+                <td class="text-right">Rp{{ number_format($grandTotal, 0, ',', '.') }}</td>
             </tr>
         </tfoot>
     </table>
 
-        <!-- Notes -->
+    <!-- Notes -->
     <div class="notes">
         <p>Note : {{ $invoice->notes ?? 'none' }}</p>
     </div>
@@ -130,8 +160,8 @@
 
     <!-- Footer -->
     <div class="footer">
-        <p>If you have any questions, please contact: info@perusahaan.com</p>
-        <p>www.nofileexistshere.my.id/</p>
+        <p>If you have any questions, please contact: info@nofileexistshere.my.id</p>
+        <p>www.nofileexistshere.my.id</p>
     </div>
 </body>
 </html>

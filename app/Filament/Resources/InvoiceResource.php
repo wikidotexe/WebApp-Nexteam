@@ -3,12 +3,15 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\InvoiceResource\Pages;
+use Barryvdh\DomPDF\Facade\Pdf;
+use Filament\Tables\Actions\Action;
 use App\Models\Invoice;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
+use Carbon\Carbon;
 
 class InvoiceResource extends Resource
 {
@@ -24,19 +27,25 @@ class InvoiceResource extends Resource
                 Forms\Components\Select::make('client_id')
                     ->relationship('client', 'name')
                     ->required(),
+
                 Forms\Components\Select::make('project_id')
                     ->relationship('project', 'title')
                     ->required(),
+
                 Forms\Components\TextInput::make('invoice_number')
-                    ->required()
-                    ->unique(ignoreRecord: true),
+                    ->disabled()
+                    ->default(function () {
+                        $year = date('Y');
+                        $lastId = Invoice::max('id') + 1;
+                        return "{$year}-Nexteam-" . str_pad($lastId, 5, '0', STR_PAD_LEFT);
+                    }),
+
                 Forms\Components\DatePicker::make('invoice_date')->required(),
 
                 Forms\Components\TextInput::make('tax')
-                ->numeric()
-                ->suffix('%')
-                ->default(0),
-
+                    ->numeric()
+                    ->suffix('%')
+                    ->default(0),
 
                 Forms\Components\Select::make('status')
                     ->options([
@@ -46,7 +55,7 @@ class InvoiceResource extends Resource
                     ])
                     ->default('unpaid')
                     ->required(),
-                
+
                 Forms\Components\TextInput::make('notes')
                     ->required(),
 
@@ -58,7 +67,6 @@ class InvoiceResource extends Resource
                         Forms\Components\TextInput::make('unit_price')->numeric()->prefix('Rp')->required(),
                     ])
                     ->columnSpanFull(),
-                    
             ]);
     }
 
@@ -70,39 +78,51 @@ class InvoiceResource extends Resource
                 Tables\Columns\TextColumn::make('client.name'),
                 Tables\Columns\TextColumn::make('project.title'),
                 Tables\Columns\TextColumn::make('invoice_date')->date(),
-                Tables\Columns\TextColumn::make('total_amount')->money('IDR'),
-                Tables\Columns\TextColumn::make('status')->badge(),
+                Tables\Columns\TextColumn::make('total')
+                ->label('Total')
+                ->money('IDR')
+                ->getStateUsing(function (Invoice $record) {
+                    $taxRate = ($record->tax ?? 0) / 100;
+
+                    // Jumlahkan tiap item: (qty * unit_price) + rounded(tax per item)
+                    $grandTotal = $record->items->sum(function ($item) use ($taxRate) {
+                        $itemTotal = $item->quantity * $item->unit_price;
+                        $itemTax = (int) round($itemTotal * $taxRate); // pembulatan pajak per-item
+                        return $itemTotal + $itemTax;
+                    });
+
+                    return $grandTotal;
+                }),
             ])
             ->actions([
-            Tables\Actions\EditAction::make(),
-            Tables\Actions\DeleteAction::make(),
-            
-            Tables\Actions\Action::make('viewPdf')
-                ->label('View PDF')
-                ->icon('heroicon-o-eye')
-                ->color('primary')
-                ->action(function (Invoice $record) {
-                    $pdf = \Barryvdh\DomPDF\Facade\Pdf::loadView('invoice.pdf', ['invoice' => $record]);
+                Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
+                Tables\Actions\Action::make('viewPdf')
+                    ->label('View PDF')
+                    ->icon('heroicon-o-eye')
+                    ->color('primary')
+                    ->action(function (Invoice $record) {
+                        $pdf = \Barryvdh\DomPDF\Facade\Pdf::loadView('invoice.pdf', ['invoice' => $record]);
+                        $filename = 'invoice-' . Carbon::now()->format('Ymd') . '-Nexteam' . str_pad($record->id, 5, '0', STR_PAD_LEFT) . '-' . str_replace(' ', '_', $record->client->name) . '-' . str_replace(' ', '_', $record->project->title) . '.pdf';
 
-                    return response($pdf->output(), 200)
-                        ->header('Content-Type', 'application/pdf')
-                        ->header('Content-Disposition', 'inline; filename="invoice-' . $record->invoice_number . '.pdf"');
-                }),
+                        return response($pdf->output(), 200)
+                            ->header('Content-Type', 'application/pdf')
+                            ->header('Content-Disposition', 'inline; filename="' . $filename . '"');
+                    }),
+                Tables\Actions\Action::make('downloadPdf')
+                    ->label('Download PDF')
+                    ->icon('heroicon-o-arrow-down-tray')
+                    ->color('danger')
+                    ->action(function (Invoice $record) {
+                        $pdf = \Barryvdh\DomPDF\Facade\Pdf::loadView('invoice.pdf', ['invoice' => $record]);
+                        $filename = 'invoice-' . Carbon::now()->format('Ymd') . '-Nexteam' . str_pad($record->id, 5, '0', STR_PAD_LEFT) . '-' . str_replace(' ', '_', $record->client->name) . '-' . str_replace(' ', '_', $record->project->title) . '.pdf';
 
-            Tables\Actions\Action::make('downloadPdf')
-                ->label('Download PDF')
-                ->icon('heroicon-o-arrow-down-tray')
-                ->color('danger')
-                ->action(function (Invoice $record) {
-                    $pdf = \Barryvdh\DomPDF\Facade\Pdf::loadView('invoice.pdf', ['invoice' => $record]);
-
-                    return response()->streamDownload(
-                        fn() => print($pdf->output()),
-                        'invoice-' . $record->invoice_number . '.pdf'
-                    );
-                }),
+                        return response()->streamDownload(
+                            fn() => print($pdf->output()),
+                            $filename
+                        );
+                    }),
             ]);
-
     }
 
     public static function getPages(): array

@@ -36,7 +36,7 @@ class Invoice extends Model
         parent::boot();
         static::creating(function ($invoice) {
             if (empty($invoice->invoice_number)) {
-                $prefix = date('Y') . '-INV-';
+                $prefix = date('Y') . '-Nexteam-';
                 $last = static::whereYear('created_at', date('Y'))->max('id') ?? 0;
                 $invoice->invoice_number = $prefix . str_pad($last + 1, 4, '0', STR_PAD_LEFT);
             }
