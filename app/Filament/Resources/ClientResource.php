@@ -36,6 +36,19 @@ class ClientResource extends Resource
                     ->maxLength(255),
                 Forms\Components\TextInput::make('phone')
                     ->maxLength(50),
+                Forms\Components\Select::make('category')
+                    ->options([
+                        'Web Development' => 'Web Development',
+                        'Desktop Application' => 'Desktop Application',
+                        'Graphic Design' => 'Graphic Design',
+                        'Internet Network Design' => 'Internet Network Design',
+                        'Mobile Application' => 'Mobile Application',
+                        'Troubleshooting Cases' => 'Troubleshooting Cases',
+                        
+                    ])
+                    ->default('Web Development')
+                    ->label('Project Category')
+                    ->required(),
                 Forms\Components\Textarea::make('address')
                     ->columnSpanFull(),
             ]);
@@ -48,6 +61,7 @@ class ClientResource extends Resource
                 Tables\Columns\TextColumn::make('name')->searchable()->sortable(),
                 Tables\Columns\TextColumn::make('email')->searchable(),
                 Tables\Columns\TextColumn::make('phone'),
+                Tables\Columns\TextColumn::make('category')->badge(),
                 Tables\Columns\TextColumn::make('address')->limit(30),
                 Tables\Columns\TextColumn::make('created_at')->dateTime(),
             ])

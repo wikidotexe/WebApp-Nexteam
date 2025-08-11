@@ -83,8 +83,9 @@ class InvoiceResource extends Resource
                 Tables\Columns\TextColumn::make('client.name'),
                 Tables\Columns\TextColumn::make('project.title'),
                 Tables\Columns\TextColumn::make('invoice_date')->date(),
+                Tables\Columns\TextColumn::make('status')->badge(),
                 Tables\Columns\TextColumn::make('total')
-                ->label('Total')
+                ->label('Price')
                 ->money('IDR')
                 ->getStateUsing(function (Invoice $record) {
                     $taxRate = ($record->tax ?? 0) / 100;
