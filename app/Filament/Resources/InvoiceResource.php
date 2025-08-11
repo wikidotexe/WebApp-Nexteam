@@ -20,6 +20,11 @@ class InvoiceResource extends Resource
     protected static ?string $navigationIcon = 'heroicon-o-document-text';
     protected static ?string $navigationLabel = 'Invoices';
 
+    public static function getNavigationGroup(): ?string
+    {
+        return 'Work';
+    }
+
     public static function form(Form $form): Form
     {
         return $form
@@ -101,14 +106,21 @@ class InvoiceResource extends Resource
                     ->label('View PDF')
                     ->icon('heroicon-o-eye')
                     ->color('primary')
-                    ->action(function (Invoice $record) {
-                        $pdf = \Barryvdh\DomPDF\Facade\Pdf::loadView('invoice.pdf', ['invoice' => $record]);
-                        $filename = 'invoice-' . Carbon::now()->format('Ymd') . '-Nexteam' . str_pad($record->id, 5, '0', STR_PAD_LEFT) . '-' . str_replace(' ', '_', $record->client->name) . '-' . str_replace(' ', '_', $record->project->title) . '.pdf';
+                    ->modalHeading('Invoice Preview')
+                    ->modalContent(function (Invoice $record) {
+                        $pdf = \Barryvdh\DomPDF\Facade\Pdf::loadView('invoice.pdf', [
+                            'invoice' => $record
+                        ]);
+                        
+                        $base64Pdf = base64_encode($pdf->output());
 
-                        return response($pdf->output(), 200)
-                            ->header('Content-Type', 'application/pdf')
-                            ->header('Content-Disposition', 'inline; filename="' . $filename . '"');
-                    }),
+                        return view('components.pdf-viewer', [
+                            'pdfData' => $base64Pdf
+                        ]);
+                    })
+                    ->modalWidth('7xl')
+                    ->requiresConfirmation(false),
+
                 Tables\Actions\Action::make('downloadPdf')
                     ->label('Download PDF')
                     ->icon('heroicon-o-arrow-down-tray')

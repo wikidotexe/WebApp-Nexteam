@@ -23,6 +23,11 @@ class FaqResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-sparkles';
 
+    public static function getNavigationGroup(): ?string
+    {
+        return 'Web';
+    }
+
     public static function form(Form $form): Form
     {
         return $form

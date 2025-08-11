@@ -24,6 +24,11 @@ class MemberResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-identification';
 
+    public static function getNavigationGroup(): ?string
+    {
+        return 'Web';
+    }
+
     public static function form(Form $form): Form
     {
         return $form

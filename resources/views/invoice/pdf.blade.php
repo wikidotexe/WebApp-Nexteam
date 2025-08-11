@@ -19,7 +19,7 @@
 
         /* Header */
         .company-logo { float: left; }
-        .company-logo img { max-height: 60px; }
+        .company-logo img { max-height: 80px; }
         .invoice-title { float: right; text-align: right; font-size: 32px; font-weight: bold; color: #2c3e50; }
 
         /* Top Info */
@@ -33,7 +33,7 @@
         table.items th {
             background-color: #3498db;
             color: white;
-            text-align: left;
+            text-align: center;
         }
         table.items td { vertical-align: top; }
 
@@ -69,7 +69,8 @@
             <img src="{{ public_path('front/images/Logo NFEH.png') }}" alt="Company Logo">
             <p><strong>NoFileExistsHere.</strong><br>
                Jl. Perumahan Pesona Grogol 2, Depok<br>
-               info@nofileexistshere.my.id | (08) 889177045
+               info@nofileexistshere.my.id | (08) 889177045<br>
+               www.nofileexistshere.my.id
             </p>
         </div>
         <div class="invoice-title">
@@ -161,7 +162,6 @@
     <!-- Footer -->
     <div class="footer">
         <p>If you have any questions, please contact: info@nofileexistshere.my.id</p>
-        <p>www.nofileexistshere.my.id</p>
     </div>
 </body>
 </html>

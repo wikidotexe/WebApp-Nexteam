@@ -3,16 +3,23 @@
 namespace App\Http\Controllers;
 
 use App\Models\Invoice;
-use Illuminate\Http\Request;
 use Dompdf\Dompdf;
 
 class InvoiceController extends Controller
 {
-    public function exportPdf($id)
+   public function exportPdf($id)
     {
-        $invoice = Invoice::findOrFail($id);
+        $invoice = Invoice::with(['client', 'project', 'items'])->findOrFail($id);
 
-        $html = view('invoices.pdf', compact('invoice'))->render();
+        // Bersihkan semua string di array
+        $cleanData = json_decode(json_encode($invoice), true);
+        array_walk_recursive($cleanData, function (&$value) {
+            if (is_string($value)) {
+                $value = mb_convert_encoding($value, 'UTF-8', 'UTF-8');
+            }
+        });
+
+        $html = view('invoices.pdf', ['invoice' => $cleanData])->render();
 
         $dompdf = new Dompdf();
         $dompdf->loadHtml($html);

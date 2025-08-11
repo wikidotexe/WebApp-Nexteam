@@ -23,6 +23,11 @@ class ServiceResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-command-line';
 
+    public static function getNavigationGroup(): ?string
+    {
+        return 'Web';
+    }
+
     public static function form(Form $form): Form
     {
         return $form

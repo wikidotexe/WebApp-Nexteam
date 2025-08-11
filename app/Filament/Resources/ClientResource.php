@@ -18,6 +18,11 @@ class ClientResource extends Resource
     protected static ?string $navigationLabel = 'Clients';
     protected static ?string $pluralModelLabel = 'Clients';
 
+    public static function getNavigationGroup(): ?string
+    {
+        return 'Work';
+    }
+
     public static function form(Form $form): Form
     {
         return $form

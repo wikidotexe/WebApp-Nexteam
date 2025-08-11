@@ -30,12 +30,27 @@ class AdminPanelProvider extends PanelProvider
             ->colors([
                 'primary' => Color::Amber,
             ])
-            ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
-            ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')
             ->pages([
                 Pages\Dashboard::class,
             ])
-            ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\\Filament\\Widgets')
+            ->resources([
+                // Web
+                \App\Filament\Resources\ArticleResource::class,
+                \App\Filament\Resources\CategoryResource::class,
+                \App\Filament\Resources\FaqResource::class,
+                \App\Filament\Resources\MemberResource::class,
+                \App\Filament\Resources\PageResource::class,
+                \App\Filament\Resources\ServiceResource::class,
+
+                // Work
+                \App\Filament\Resources\ClientResource::class,
+                \App\Filament\Resources\InvoiceResource::class,
+                \App\Filament\Resources\ProjectResource::class,
+            ])
+            ->navigationGroups([
+                \Filament\Navigation\NavigationGroup::make('Web'),
+                \Filament\Navigation\NavigationGroup::make('Work'),
+            ])
             ->widgets([
                 Widgets\AccountWidget::class,
                 Widgets\FilamentInfoWidget::class,

@@ -24,6 +24,11 @@ class PageResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-swatch';
 
+    public static function getNavigationGroup(): ?string
+    {
+        return 'Web';
+    }
+
     public static function form(Form $form): Form
     {
         return $form

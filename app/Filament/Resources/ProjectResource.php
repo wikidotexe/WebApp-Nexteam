@@ -18,6 +18,11 @@ class ProjectResource extends Resource
     protected static ?string $navigationIcon = 'heroicon-o-currency-dollar';
     protected static ?string $navigationLabel = 'Projects';
 
+    public static function getNavigationGroup(): ?string
+    {
+        return 'Work';
+    }
+
     public static function form(Form $form): Form
     {
         return $form

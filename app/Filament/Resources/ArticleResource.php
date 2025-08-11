@@ -25,6 +25,11 @@ class ArticleResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-globe-asia-australia';
 
+    public static function getNavigationGroup(): ?string
+    {
+        return 'Web';
+    }
+
     public static function form(Form $form): Form
     {
         return $form
