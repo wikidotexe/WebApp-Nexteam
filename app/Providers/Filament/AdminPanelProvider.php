@@ -23,6 +23,10 @@ class AdminPanelProvider extends PanelProvider
     public function panel(Panel $panel): Panel
     {
         return $panel
+            ->renderHook(
+                'head.end',
+                fn (): string => '<link rel="icon" type="image/png" href="' . asset('front/images/Logo NFEH.png?v=' . time()) . '">'
+            )
             ->default()
             ->id('admin')
             ->path('nexteam')
@@ -41,6 +45,7 @@ class AdminPanelProvider extends PanelProvider
                 \App\Filament\Resources\MemberResource::class,
                 \App\Filament\Resources\PageResource::class,
                 \App\Filament\Resources\ServiceResource::class,
+                \App\Filament\Resources\OurclientsResource::class,
 
                 // Work
                 \App\Filament\Resources\ClientResource::class,

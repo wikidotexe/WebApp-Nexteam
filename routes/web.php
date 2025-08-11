@@ -24,5 +24,8 @@ Route::get('/blog', ShowBlog::class)-> name('blog');
 Route::get('/blog/{id}', BlogDetail::class)-> name('blogDetail');
 Route::get('/faqs', ShowFaqPage::class)-> name('faqs');
 Route::get('/page/{id}', ShowPage::class)-> name('page');
+Route::get('/aboutus', ShowPage::class)->defaults('id', 7)->name('aboutus');
+Route::get('/privacy-policy', ShowPage::class)->defaults('id', 8)->name('privacy-policy');
+Route::get('/term-conditions', ShowPage::class)->defaults('id', 9)->name('term-conditions');
 Route::get('/contact', ShowContactPage::class)-> name('contact');
 Route::get('/invoice/{id}/pdf', [InvoiceController::class, 'exportPdf'])->name('invoice.pdf');

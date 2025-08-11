@@ -90,41 +90,7 @@
   </div>
 </section>
 
-<section class="banner clients" id="clients">
-  <div class="clients-heading-wrapper">
-    <hr class="clients-line">
-    <h1 class="heading">Our Clients</h1>
-    <hr class="clients-line">
-  </div>
-
-  <p class="client-description">
-    Klien yang mempercayakan kebutuhan digital mereka kepada kami.
-  </p>
-
-  <div class="logos-scroll-mask">
-    <div class="logos-scroll">
-      @foreach(range(1,2) as $i)
-        @foreach([
-          ['https://www.boncafeindonesia.com', 'boncafe.png', 'Boncafe Indonesia'],
-          ['https://virsawisata.co.id/', 'Virsa Wisataa.png', 'Virsa Wisataa'],
-          ['https://proban.co.id', 'proban.png', 'PT Proban Otsbrug Trisakti'],
-          ['https://negashii.web.id', 'negashii.png', 'Negashii'],
-          ['https://www.telkomsel.com/landingpage/regular/reg5?utm_source=SEM&utm_medium=Text&utm_campaign=MDM-AON-TSEL-Revampq3-BC-10670-Convert-Reg5Quad2&utm_term=Text&utm_content=brand_jitu1_revampaonQuad2&gad_source=1&gad_campaignid=22719197410&gbraid=0AAAAADPZ06NJsxM4ak9one0hMdSMRKNfv&gclid=CjwKCAjw7fzDBhA7EiwAOqJkh7Ge_uJ8KlK8hVjE38BWhQl7HfdSHZ5eQ_u2LUj_3i1ae1OGDfFPwRoCA04QAvD_BwE', 'indihome.png', 'Indihome'],
-          ['https://transmonang.com/', 'Transmonang.png', 'Transmonang'],
-          ['http://transgo.id/', 'transgo.png', 'PT MARIFAH CIPTA BANGSA'],
-          ['http://xl.co.id/', 'xl.png', 'XL'],
-          ['https://cv-teknikmandiri.vercel.app/', 'berkahteknik.png', 'CV Berkah Teknik Mandiri'],
-          ['https://pair-studio.com/', 'pairstudio.jpg', 'Pair Studio'],
-          ['https://blpbeauty.com/', 'blp.png', 'BLP'],
-        ] as [$url, $image, $alt])
-          <a href="{{ $url }}" target="_blank">
-            <img src="{{ asset("/front/images/clients/$image") }}" alt="{{ $alt }}" class="client-logo">
-          </a>
-        @endforeach
-      @endforeach
-    </div>
-  </div>
-</section>
+@livewire('show-our-clients')
 
 <section class="banner bg-tertiary position-relative overflow-hidden clients" id="testimonial">
   <div class="responsive-container-block big-container">
