@@ -95,11 +95,9 @@
 					<ul class="list-unstyled">
 						<li class="mb-2"><a href="https://fastwork.id/user/nfxhere?source=web_marketplace_profile-menu_profile" target="_blank">Fastwork</a>
 						</li>
-						<li class="mb-2"><a href="https://www.fiverr.com/" target="_blank">Fiverr</a>
+						<li class="mb-2"><a href="https://www.upwork.com/services/product/development-it-technical-support-jaringan-website-toubleshooting-1936466459809396282?ref=project_share" target="_blank">Upwork</a>
 						</li>
-						<li class="mb-2"><a href="https://www.upwork.com/" target="_blank">Upwork</a>
-						</li>
-						<li class="mb-2"><a href="https://www.sribu.com/id" target="_blank">Sribu</a>
+						<li class="mb-2"><a href="https://www.sribu.com/id/users/wikiarlianm/technical-support-32a666c4-d3a8-45be-af61-a4b54ec3ebdb" target="_blank">Sribu</a>
 						</li>
 					</ul>
 				</div>
@@ -132,7 +130,7 @@
 			</div>		
 		</div>
 		<div class="text-center mt-4">
-            <p class="text-muted">&copy; 2025 All Right Reserved - NoFileExistsHere.</p>
+            <p class="text-muted">&copy; 2023 - 2025 All Right Reserved - PT Teknologi Kreasi Digital.</p>
         </div>
 	</div>
 </footer>
