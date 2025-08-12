@@ -93,7 +93,7 @@
 				<div class="footer-widget">
 					<h5 class="mb-4 text-primary font-secondary">Other Places</h5>
 					<ul class="list-unstyled">
-						<li class="mb-2"><a href="https://fastwork.id/user/nfxhere?source=web_marketplace_profile-menu_profile" target="_blank">Fastwork</a>
+						<li class="mb-2"><a href="https://fastwork.id/user/wikiarlnm/technical-support-53320956" target="_blank">Fastwork</a>
 						</li>
 						<li class="mb-2"><a href="https://www.upwork.com/services/product/development-it-technical-support-jaringan-website-toubleshooting-1936466459809396282?ref=project_share" target="_blank">Upwork</a>
 						</li>
