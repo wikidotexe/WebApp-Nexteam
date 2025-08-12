@@ -96,65 +96,144 @@
   <div class="responsive-container-block big-container">
     <div class="responsive-container-block bg">
       <h1 class="heading">Testimonials</h1>
-      <p class="client-description">Dengarkan langsung dari pelanggan kami tentang pengalaman mereka bersama kami.</p>
+      <p class="client-description">
+        Dengarkan langsung dari pelanggan kami tentang pengalaman mereka bersama kami.
+      </p>
 
-      <div class="testimonial-grid">
-        {{-- Testimonial 1 --}}
-        <div class="testimonial-card">
-          <i class="fas fa-quote-left quote-icon"></i>
-          <p class="info-block">
-            Berkat bantuannya, migrasi website saya dari komputer lokal ke hosting untuk tugas akhir perkuliahan jadi lebih mudah dan lancar. Semua prosesnya dijelaskan dengan jelas, jadi saya nggak bingung sama sekali. Pelayanannya cepat, responsif, dan hasilnya memuaskan. Sukses selalu buat Next Team! 😁🚀
-          </p>
-          <div class="person">
-            <img class="profile-img" src="{{ asset('/front/images/boy.png') }}">
-            <div class="text-block">
-              <p class="name">Muhajir</p>
-              <p class="desig">Mahasiswa</p>
-              <div class="rating">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+      <!-- Swiper Container -->
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          
+          <!-- Testimonial 1 -->
+          <div class="swiper-slide testimonial-card">
+            <i class="fas fa-quote-left quote-icon"></i>
+            <p class="info-block">
+              Proses migrasi website tugas akhir saya berjalan sangat lancar. 
+              Semua langkah dijelaskan secara rinci, sehingga saya bisa memahami setiap tahapannya.
+            </p>
+            <div class="person">
+              <img class="profile-img" src="{{ asset('/front/images/boy.png') }}">
+              <div class="text-block">
+                <p class="name">Muhajir</p>
+                <p class="desig">Mahasiswa</p>
+                <div class="rating">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        {{-- Testimonial 2 --}}
-        <div class="testimonial-card">
-          <i class="fas fa-quote-left quote-icon"></i>
-          <p class="info-block">
-            Pelayanannya oke banget! Dari awal sampai akhir, semuanya dijelaskan dengan jelas dan detail, jadi nggak bingung sama sekali. Hasilnya juga sesuai ekspektasi—company profile jadi lebih rapi, informatif, dan enak dibaca. Pokoknya puas banget, recommended banget buat yang butuh jasa serupa.
-          </p>
-          <div class="person">
-            <img class="profile-img" src="{{ asset('/front/images/boy.png') }}">
-            <div class="text-block">
-              <p class="name">Aris Hermawanto</p>
-              <p class="desig">Pekerja Lepas</p>
-              <div class="rating">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          <!-- Testimonial 2 -->
+          <div class="swiper-slide testimonial-card">
+            <i class="fas fa-quote-left quote-icon"></i>
+            <p class="info-block">
+              Pelayanan yang diberikan sangat ramah dan profesional. 
+              Tim tidak hanya bekerja cepat, tetapi juga memperhatikan detail, 
+              sehingga hasil akhirnya rapi dan sesuai ekspektasi saya.
+            </p>
+            <div class="person">
+              <img class="profile-img" src="{{ asset('/front/images/boy.png') }}">
+              <div class="text-block">
+                <p class="name">Aris Hermawanto</p>
+                <p class="desig">Pekerja Lepas</p>
+                <div class="rating">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        {{-- Testimonial 3 --}}
-        <div class="testimonial-card">
-          <i class="fas fa-quote-left quote-icon"></i>
-          <p class="info-block">
-            Proses instalasi jaringannya berjalan lancar dan cepat! Sekarang koneksi di tempat kami jadi lebih stabil dan nggak ada lagi gangguan yang bikin repot. Timnya juga ramah banget, enak diajak diskusi, dan selalu siap bantu kalau ada kendala. Pokoknya puas banget dengan hasilnya! 👍
-          </p>
-          <div class="person">
-            <img class="profile-img" src="{{ asset('/front/images/girl.png') }}">
-            <div class="text-block">
-              <p class="name">Fitriah Ulfah</p>
-              <p class="desig">HRD - Forthen Indonesia</p>
-              <div class="rating">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          <!-- Testimonial 3 -->
+          <div class="swiper-slide testimonial-card">
+            <i class="fas fa-quote-left quote-icon"></i>
+            <p class="info-block">
+              Instalasi jaringan dilakukan dengan cepat dan hasilnya sangat memuaskan. 
+              Koneksi stabil sepanjang waktu, dan tim selalu siap membantu ketika ada kendala.
+            </p>
+            <div class="person">
+              <img class="profile-img" src="{{ asset('/front/images/girl.png') }}">
+              <div class="text-block">
+                <p class="name">Fitriah Ulfah</p>
+                <p class="desig">HRD - Forthen Indonesia</p>
+                <div class="rating">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
               </div>
             </div>
           </div>
+
+          <!-- Testimonial 4 -->
+          <div class="swiper-slide testimonial-card">
+            <i class="fas fa-quote-left quote-icon"></i>
+            <p class="info-block">
+              Proses pemasangan sangat cepat dan hasilnya langsung terasa. 
+              Sekarang, pekerjaan bisa berjalan tanpa gangguan berkat koneksi yang stabil.
+            </p>
+            <div class="person">
+              <img class="profile-img" src="{{ asset('/front/images/girl.png') }}">
+              <div class="text-block">
+                <p class="name">Visca</p>
+                <p class="desig">Finance Accounting</p>
+                <div class="rating">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 5 -->
+          <div class="swiper-slide testimonial-card">
+            <i class="fas fa-quote-left quote-icon"></i>
+            <p class="info-block">
+              Sangat puas dengan hasil pekerjaan yang rapi dan layanan yang profesional. 
+              Jaringan stabil sepanjang hari membuat pekerjaan menjadi lebih efisien.
+            </p>
+            <div class="person">
+              <img class="profile-img" src="{{ asset('/front/images/boy.png') }}">
+              <div class="text-block">
+                <p class="name">Guntur Sahadi</p>
+                <p class="desig">Technician Telkom</p>
+                <div class="rating">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
         </div>
       </div>
+
     </div>
   </div>
 </section>
+
+<!-- Tambahkan di akhir <body> -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    loop: true,
+    autoplay: {
+      delay: 3000, // 3 detik
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      0: { slidesPerView: 1 },
+      768: { slidesPerView: 2 },
+      1024: { slidesPerView: 3 }
+    }
+  });
+</script>
 
 </main>

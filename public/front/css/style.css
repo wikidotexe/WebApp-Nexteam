@@ -10625,7 +10625,7 @@ footer .text-center p {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
-    max-width: 1200px;
+    max-width: 1150px;
     margin: 0 auto;
 }
 
@@ -10633,18 +10633,18 @@ footer .text-center p {
 .testimonial-card {
     background-color: #fff;
     border-radius: 16px;
-    padding: 30px 25px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    padding: 20px 25px;
+    /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06); */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     transition: 0.3s ease;
 }
 
-.testimonial-card:hover {
+/* .testimonial-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-}
+} */
 
 /* Quote Icon */
 .quote-icon {
@@ -10696,6 +10696,21 @@ footer .text-center p {
     color: gold;
     font-size: 14px;
     margin-right: 2px;
+}
+
+/* Gunakan CSS testimonial yang lama, tapi hapus .testimonial-grid */
+.swiper {
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+.swiper-slide {
+    height: auto; /* supaya tinggi slide mengikuti konten */
+}
+
+#testimonial .info-block,
+#testimonial {
+    text-align: justify;
 }
 
 /* Responsive */
