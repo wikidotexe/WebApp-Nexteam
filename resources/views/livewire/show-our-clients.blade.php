@@ -2,14 +2,14 @@
     <section class="banner clients" id="clients">
         <div class="clients-heading-wrapper">
             <hr class="clients-line">
-            <h1 class="heading">Our Clients</h1>
+            <h2 class="heading">Our Clients</h2>
             <hr class="clients-line">
         </div>
 
         <p class="client-description">
             Klien yang mempercayakan kebutuhan digital mereka kepada kami.
         </p>
-
+        <br>
         <div class="logos-scroll-mask">
             <div class="logos-scroll">
                 @foreach(range(1,2) as $i)

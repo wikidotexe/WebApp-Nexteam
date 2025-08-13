@@ -5,7 +5,7 @@
       <div class="col-lg-6">
         <div class="section-title text-center">
           <p class="text-primary text-uppercase fw-bold mb-3">Frequient Questions</p>
-          <h1>Frequently Asked Questions</h1>
+          <h2>Frequently Asked Questions</h2>
         </div>
       </div>
     </div>

@@ -4,7 +4,7 @@
     <div class="row align-items-center justify-content-center">
       <div class="col-lg-6 mb-5 mb-lg-0">
         <div class="block text-center text-lg-start pe-0 pe-xl-5">
-          <h1 class="text-capitalize mb-4">Innovate. Excellent!. Succeed!</h1>
+          <h1 class="text-capitalize mb-4">Innovate. Excellent!. Succeed! 🚀</h1>
           <p class="mb-4">Penyedia layanan teknologi di bidang Computers, Internet, dan Website yang mudah diakses.</p> <a type="button"
             class="btn btn-primary" href="{{ route('servicesPage') }}" wire:navigate>See More<span style="font-size: 14px;" class="ms-2 fas fa-arrow-right"></span></a>
         </div>
@@ -91,6 +91,7 @@
 </section>
 
 @livewire('show-our-clients')
+@livewire('show-faq-page')
 
 <section class="banner bg-tertiary position-relative overflow-hidden clients" id="testimonial">
   <div class="responsive-container-block big-container">

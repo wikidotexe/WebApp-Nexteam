@@ -78,7 +78,7 @@
 					<li class="nav-item "> <a wire:navigate class="nav-link" href="{{ route('servicesPage') }}">Services</a></li>
 					<li class="nav-item "> <a wire:navigate class="nav-link" href="{{ route('teamPage')}}">Our Team</a></li>
 					<li class="nav-item "> <a wire:navigate class="nav-link " href="{{ route('blog')}}">Blog</a></li>
-					<li class="nav-item "> <a wire:navigate class="nav-link " href="{{ route('faqs')}}">FAQ</a></li>
+					{{-- <li class="nav-item "> <a wire:navigate class="nav-link " href="{{ route('faqs')}}">FAQ</a></li> --}}
 				</ul>
 				<a href="https://store.nofileexistshere.my.id/" target="_blank" class="btn btn-outline-primary">Store</a><br>
 				<a wire:navigate href="{{ route('contact') }}" class="btn btn-outline-primary">Contact Us</a>

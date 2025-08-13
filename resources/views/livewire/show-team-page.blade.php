@@ -41,7 +41,7 @@
             <div class="col-12">
                 <div class="section-title">
                     <p class="text-primary text-uppercase fw-bold mb-3">Questions You Have</p>
-                    <h1>People Behind Us</h1>
+                    <h1>People Behind Us &nbsp;👀</h1>
                     <p class="mb-0">Kami adalah <b>#NEXTTeam</b> yang berdedikasi dengan keahlian dan semangat yang sama untuk mencapai kesuksesan. <br>Setiap anggota membawa keterampilan unik yang memperkuat kami dalam memberikan hasil terbaik untuk Anda. <br>Kenali lebih dekat orang-orang hebat di balik semua pencapaian ini!</p>
                 </div>
             </div>

@@ -10507,7 +10507,7 @@ footer .text-center p {
 /* Clients */
 
 .clients {
-    background-color: #fbfbfb; /* Samakan dengan background website */
+    /* background-color: #fbfbfb; Samakan dengan background website */
     padding: 3rem 1rem;
     overflow: hidden;
     color: #000;
