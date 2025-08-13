@@ -10,17 +10,21 @@
 	<meta name="keywords" content="computers, internet, technology, website, NoFIleExistsHere, nofileexistshere, nfeh, jasa layanan computer & internet">
 	<meta name="author" content="NoFIleExistsHere">
 
-	<!-- Open Graph Meta Tags -->
+	<!-- Open Graph -->
+	<meta property="og:type" content="website">
+	<meta property="og:locale" content="id_ID">
 	<meta property="og:title" content="{{ $title ?? 'NoFIleExistsHere' }}">
 	<meta property="og:description" content="Penyedia layanan teknologi di bidang Computers, Internet, dan Website yang mudah diakses, menawarkan solusi praktis untuk memenuhi kebutuhan digital Anda.">
-	<meta property="og:image" content="{{ asset('/front/images/icon.png') }}">
+	<meta property="og:image" content="{{ asset('/front/images/og-default.jpg') }}">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="630">
 	<meta property="og:url" content="{{ url()->current() }}">
 
-	<!-- Twitter Meta Tags -->
+	<!-- Twitter -->
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:title" content="{{ $title ?? 'NoFIleExistsHere' }}">
 	<meta name="twitter:description" content="Penyedia layanan teknologi di bidang Computers, Internet, dan Website yang mudah diakses, menawarkan solusi praktis untuk memenuhi kebutuhan digital Anda.">
-	<meta name="twitter:image" content="{{ asset('/front/images/icon.png') }}">
+	<meta name="twitter:image" content="{{ asset('/front/images/og-default.jpg') }}">
 
 	<!-- Favicon -->
 	<link rel="icon" href="{{ asset('/front/images/icon.png')}}" type="image/png">
@@ -138,7 +142,9 @@
 <!-- # JS Plugins -->
 <script src="{{ asset('/front/plugins/jquery/jquery.min.js')}}"></script>
 <script src="{{ asset('/front/plugins/bootstrap/bootstrap.min.js')}}"></script>
-<script src="//unpkg.com/alpinejs" defer></script>
+<script src="{{ asset('/front/plugins/scrollmenu/scrollmenu.min.js') }}"></script>
+<script src="{{ asset('/front/plugins/slick/slick.min.js')}}"></script>
+{{-- <script src="//unpkg.com/alpinejs" defer></script> --}}
 
 <!-- Main Script -->
 <script src="{{ asset('/front/js/script.js')}}"></script>
