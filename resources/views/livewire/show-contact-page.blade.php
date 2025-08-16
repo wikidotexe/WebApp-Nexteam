@@ -76,8 +76,15 @@
 										<label for="message" class="form-label">Write Message</label>
 										<textarea wire:model="message" class="form-control shadow-none" id="message" name="message" rows="3"></textarea>
 									</div>
-									<button class="btn btn-primary w-100" type="submit">Send Message</button>
+									<button class="btn btn-primary w-100" type="submit" wire:loading.remove wire:target="submit">
+										Send Message
+									</button>
 								</form>
+								{{-- Loader tampil hanya saat submit --}}
+								<div class="text-center my-3" wire:loading wire:target="submit">
+									<div class="loader"></div>
+									<p class="mt-2 text-muted">Sending email...</p>
+								</div>
 							</div>
 						</div>
 						<div class="col-lg-6 mt-5 mt-lg-0">
