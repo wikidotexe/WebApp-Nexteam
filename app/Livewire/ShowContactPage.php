@@ -27,9 +27,9 @@ class ShowContactPage extends Component
             'email' => $this->email,
             'message' => $this->message,
         ];
-
+        $adminEmail = config('mail.admin_address');
         // Send email to the admin
-        Mail::to('nofileexistshere@gmail.com')->send(new ContactEmail($mailDataToAdmin));
+        Mail::to($adminEmail)->send(new ContactEmail($mailDataToAdmin));
 
         // Data for the email to be sent to the client (user who submitted the form)
         $mailDataToClient = [

@@ -35,6 +35,8 @@ return [
     |
     */
 
+    'admin_address' => env('MAIL_ADMIN_EMAIL', 'default@example.com'),
+
     'mailers' => [
 
         'smtp' => [
