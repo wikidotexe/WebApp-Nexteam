@@ -28,7 +28,7 @@ class AdminPanelProvider extends PanelProvider
             ->path('nexteam')
             ->login()
             ->colors([
-                'primary' => Color::Amber,
+                'primary' => Color::Blue,
             ])
             ->favicon(asset('front/images/Logo NFEH.png'))
             ->pages([
@@ -54,8 +54,10 @@ class AdminPanelProvider extends PanelProvider
                 \Filament\Navigation\NavigationGroup::make('Work'),
             ])
             ->widgets([
+                \App\Filament\Widgets\LatestProject::class,
+                \App\Filament\Widgets\InvoiceStatistics::class,
+                \App\Filament\Widgets\TotalClient::class,
                 Widgets\AccountWidget::class,
-                Widgets\FilamentInfoWidget::class,
             ])
             ->middleware([
                 EncryptCookies::class,
