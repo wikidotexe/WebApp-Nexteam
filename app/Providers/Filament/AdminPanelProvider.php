@@ -54,10 +54,9 @@ class AdminPanelProvider extends PanelProvider
                 \Filament\Navigation\NavigationGroup::make('Work'),
             ])
             ->widgets([
-                \App\Filament\Widgets\LatestProject::class,
                 \App\Filament\Widgets\InvoiceStatistics::class,
                 \App\Filament\Widgets\TotalClient::class,
-                Widgets\AccountWidget::class,
+                \App\Filament\Widgets\LatestProject::class,
             ])
             ->middleware([
                 EncryptCookies::class,

@@ -7,7 +7,7 @@ use App\Models\Client;
 
 class TotalClient extends ChartWidget
 {
-    protected static ?string $heading = 'Total Client (Per Bulan)';
+    protected static ?string $heading = 'Total Client Monthly';
 
     protected function getData(): array
     {

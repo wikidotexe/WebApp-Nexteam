@@ -15,25 +15,43 @@ class LatestProject extends BaseWidget
     protected int|string|array $columnSpan = 'full';
 
     protected function getTableQuery(): Builder
+	{
+	    return Project::query()
+	        ->select('projects.*')
+	        ->leftJoin('invoices', 'projects.id', '=', 'invoices.project_id')
+	        ->with(['client', 'invoices.items']);
+	}
+
+    protected function isTableSearchable(): bool
     {
-        return Project::query()
-            ->with(['client', 'invoices.items']) // nested eager load
-            ->latest()
-            ->limit(10);
+        return true;
+    }
+
+    protected function modifyQueryUsing(Builder $query): Builder
+    {
+        if ($search = $this->getTableSearch()) {
+            $query->whereHas('client', function ($q) use ($search) {
+                $q->where('name', 'like', "%{$search}%");
+            })->orWhereHas('invoices', function ($q) use ($search) {
+                $q->where('invoice_number', 'like', "%{$search}%");
+            });
+        }
+
+        return $query;
     }
 
     protected function getTableColumns(): array
     {
         return [
-            TextColumn::make('client.name')
-                ->label('Nama Client')
-                ->sortable()
-                ->searchable(),
-
-            TextColumn::make('invoices.0.invoice_number')
-                ->label('Invoice Number')
-                ->searchable()
-                ->default('-'),
+			TextColumn::make('client.name')
+			    ->label('Nama Client')
+			    ->sortable()
+			    ->searchable(),
+			
+			TextColumn::make('invoices.invoice_number')
+		    ->label('Invoice Number')
+		    ->sortable()
+		    ->searchable(),
 
             TextColumn::make('client.category')
                 ->label('Category')
@@ -59,7 +77,7 @@ class LatestProject extends BaseWidget
                 ])
                 ->default('-'),
 
-                TextColumn::make('price')
+            TextColumn::make('price')
                 ->label('Price')
                 ->getStateUsing(function ($record) {
                     return $record->invoices->sum(function ($invoice) {
