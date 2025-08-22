@@ -115,6 +115,8 @@ Kami sangat mengapresiasi kontribusi dari siapa pun. Ikuti langkah-langkah berik
 ## 📜 **Lisensi**
 
 Proyek ini menggunakan lisensi MIT. Lihat detailnya di [LICENSE](LICENSE).
+➡️ Boleh digunakan secara komersial.  
+🚫 Tidak boleh diperjualbelikan.
 
 ---
 
